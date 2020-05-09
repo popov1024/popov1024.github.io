@@ -1,144 +1,145 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Andrey Popov</title>
-    <link>https://popov1024.github.io/</link>
-    <description>Recent content on Andrey Popov</description>
+    <title>Posts on Soho Theme</title>
+    <link>https://example.com/posts/</link>
+    <description>Recent content in Posts on Soho Theme</description>
     <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
     <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://popov1024.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://example.com/posts/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Gitlab CI and dotnet test</title>
-      <link>https://popov1024.github.io/post/gitlab-ci-and-dotnet-test/</link>
+      <link>https://example.com/posts/gitlab-ci-and-dotnet-test/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/gitlab-ci-and-dotnet-test/</guid>
+      <guid>https://example.com/posts/gitlab-ci-and-dotnet-test/</guid>
       <description>Подготовил задачу .gitlab-ci.yml для тестирования dotnet core приложений:
 test: stage: test image: mcr.</description>
     </item>
     
     <item>
       <title>Printserver на базу RaspberryPi</title>
-      <link>https://popov1024.github.io/post/printserver-na-bazu-raspberrypizero/</link>
+      <link>https://example.com/posts/printserver-na-bazu-raspberrypizero/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/printserver-na-bazu-raspberrypizero/</guid>
+      <guid>https://example.com/posts/printserver-na-bazu-raspberrypizero/</guid>
       <description>Raspberry Pi отлично подходит для принтсервера. В моем случае используется RaspberryPi Zero W, подключаемый к сети по WiFi.</description>
     </item>
     
     <item>
       <title>Модем MT-PON-AT-4 (ZTE F660)</title>
-      <link>https://popov1024.github.io/post/modem_mt-pon-at-4_zte_f660/</link>
+      <link>https://example.com/posts/modem_mt-pon-at-4_zte_f660/</link>
       <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/modem_mt-pon-at-4_zte_f660/</guid>
+      <guid>https://example.com/posts/modem_mt-pon-at-4_zte_f660/</guid>
       <description>PON модем MT-PON-AT-4 (ZTE F660) имеет возможность доступа по telnet. telnet 192.</description>
     </item>
     
     <item>
       <title>Mikrotik на страже рекламы</title>
-      <link>https://popov1024.github.io/post/mikrotik-ad/</link>
+      <link>https://example.com/posts/mikrotik-ad/</link>
       <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/mikrotik-ad/</guid>
+      <guid>https://example.com/posts/mikrotik-ad/</guid>
       <description>Блокировка рекламы на Mikrotik можно настроить с помощью переоидиечкого запуска скрипта, который для url рекламного контента подменяет ip на 127.</description>
     </item>
     
     <item>
       <title>Отправка смс через mikrotik</title>
-      <link>https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/</link>
+      <link>https://example.com/posts/otpravka-sms-chieriez-mikrotik/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/</guid>
+      <guid>https://example.com/posts/otpravka-sms-chieriez-mikrotik/</guid>
       <description>Use_SSH_to_execute_commands
-ssh router &#39;/tool sms send usb1 &amp;quot;+375XXXXXXXXXX&amp;quot; message=&amp;quot;Hello, world&amp;quot;&#39;  </description>
+ssh router &amp;#39;/tool sms send usb1 &amp;#34;+375XXXXXXXXXX&amp;#34; message=&amp;#34;Hello, world&amp;#34;&amp;#39; </description>
     </item>
     
     <item>
       <title>Собственная система мониторинга сайтов</title>
-      <link>https://popov1024.github.io/post/sobstviennaia-sistiema-monitoringha-saitov/</link>
+      <link>https://example.com/posts/sobstviennaia-sistiema-monitoringha-saitov/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/sobstviennaia-sistiema-monitoringha-saitov/</guid>
+      <guid>https://example.com/posts/sobstviennaia-sistiema-monitoringha-saitov/</guid>
       <description>Те, кто занимается поддержкой сайтов рано или поздно задумывается как мониторить их доступность.</description>
     </item>
     
     <item>
       <title>Удобная маршрутизауия mikrotik</title>
-      <link>https://popov1024.github.io/post/udobnaia-marshrutizauiia-mikrotik/</link>
+      <link>https://example.com/posts/udobnaia-marshrutizauiia-mikrotik/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/udobnaia-marshrutizauiia-mikrotik/</guid>
+      <guid>https://example.com/posts/udobnaia-marshrutizauiia-mikrotik/</guid>
       <description>Необходимо маршрутизировать несколько ip или подсетей по одному правилу.
 Решение Вариант &amp;ldquo;в лоб&amp;rdquo; прописывать все это в таблице маршрутизации.</description>
     </item>
     
     <item>
       <title>Docker Root Dir</title>
-      <link>https://popov1024.github.io/post/docker-root-dir/</link>
+      <link>https://example.com/posts/docker-root-dir/</link>
       <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/docker-root-dir/</guid>
+      <guid>https://example.com/posts/docker-root-dir/</guid>
       <description>По умолчанию Docker хранит свое окружение (образа, контейнеры и т.д.) в /var/lib/docker.</description>
     </item>
     
     <item>
       <title>ASP.Net Core custom XML formatter with Windows-1251</title>
-      <link>https://popov1024.github.io/post/asp-net-core-custom-xml-formatter/</link>
+      <link>https://example.com/posts/asp-net-core-custom-xml-formatter/</link>
       <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/asp-net-core-custom-xml-formatter/</guid>
+      <guid>https://example.com/posts/asp-net-core-custom-xml-formatter/</guid>
       <description>Возникла задача обработки XML в кодировке Windows-1251. Штатный форматтер XML в MVC ASP.</description>
     </item>
     
     <item>
       <title>1С:Предприятие 8 и представление UID</title>
-      <link>https://popov1024.github.io/post/1s-priedpriiatiie-8-i-priedstavlieniie-uid/</link>
+      <link>https://example.com/posts/1s-priedpriiatiie-8-i-priedstavlieniie-uid/</link>
       <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/1s-priedpriiatiie-8-i-priedstavlieniie-uid/</guid>
+      <guid>https://example.com/posts/1s-priedpriiatiie-8-i-priedstavlieniie-uid/</guid>
       <description>Типовой вид ссылки (например, при сериализации): 435837b5-0cf2-11e0-8093-00271346fa31
 Структурный вид ссылки: MMMMMMMM-NNNN-ZZZZ-XXXX-YYYYYYYYYYYY</description>
     </item>
     
     <item>
       <title>PowerShell SOAP</title>
-      <link>https://popov1024.github.io/post/powershell-soap/</link>
+      <link>https://example.com/posts/powershell-soap/</link>
       <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/powershell-soap/</guid>
+      <guid>https://example.com/posts/powershell-soap/</guid>
       <description>Пример вызова метода Web сервиса посредством SOAP:
-$secpasswd = ConvertTo-SecureString &amp;quot;password&amp;quot; -AsPlainText -Force $mycreds = New-Object System.</description>
+$secpasswd = ConvertTo-SecureString &amp;#34;password&amp;#34; -AsPlainText -Force $mycreds = New-Object System.</description>
     </item>
     
     <item>
       <title>1С:Предприятие &#43; Ant &#43; jenkins</title>
-      <link>https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/</link>
+      <link>https://example.com/posts/1s-priedpriiatiie-ant-jenkins/</link>
       <pubDate>Sat, 16 Mar 2013 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/</guid>
+      <guid>https://example.com/posts/1s-priedpriiatiie-ant-jenkins/</guid>
       <description>1С:Предприятие обладает очень скудными средствами разработки и интеграции. Однако выжать максимум автоматизации сборки и публикации можно.</description>
     </item>
     
     <item>
       <title>Востановление флешки Corsair Survivor</title>
-      <link>https://popov1024.github.io/post/vostanovlieniie/</link>
+      <link>https://example.com/posts/vostanovlieniie/</link>
       <pubDate>Mon, 29 Aug 2011 00:00:00 +0300</pubDate>
       
-      <guid>https://popov1024.github.io/post/vostanovlieniie/</guid>
+      <guid>https://example.com/posts/vostanovlieniie/</guid>
       <description>Казалось бы, что флешки Corsair Survivor неубиваемы&amp;hellip;
 Однако моя в один прекрасный момент умерла.</description>
     </item>
     
     <item>
       <title>Сколько нужно прищепок?</title>
-      <link>https://popov1024.github.io/post/skolko-nuzhno-prishchiepok/</link>
+      <link>https://example.com/posts/skolko-nuzhno-prishchiepok/</link>
       <pubDate>Thu, 11 Aug 2011 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/skolko-nuzhno-prishchiepok/</guid>
+      <guid>https://example.com/posts/skolko-nuzhno-prishchiepok/</guid>
       <description>Как обычно вешаются шторы на прищепки? Вешаем два края на крайние прищепки, а затем средней прищепкой цепляем нижнюю точку провиса.</description>
     </item>
     

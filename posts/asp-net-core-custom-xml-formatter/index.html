@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.70.0" />
+
+  <title>ASP.Net Core custom XML formatter with Windows-1251 &middot; Soho Theme</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en"/>
+
+  
+  <meta property="og:image" content="https://example.com/images/profile.png">
+
+  
+  <meta property="og:type" content="blog"/>
+  <meta property="og:site_name" content="Soho Theme"/><meta property="og:title" content="ASP.Net Core custom XML formatter with Windows-1251"/>
+  <meta property="og:url" content="https://example.com/posts/asp-net-core-custom-xml-formatter/"/>
+  <meta property="og:description" content="Возникла задача обработки XML в кодировке Windows-1251. Штатный форматтер XML в MVC ASP."/>
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Soho Theme",
+    "url" : "https://example.com/",
+    "image": "https://example.com/images/profile.png",
+    "description": ""
+  }
+  </script>
+
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://example.com/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://example.com/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://example.com/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://example.com/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Soho Theme</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://example.com/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="#" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="#" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="#" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>ASP.Net Core custom XML formatter with Windows-1251</h1>
+
+  <div class="post-date">
+    <time datetime="2018-04-09T00:00:00Z">Apr 9, 2018</time> · 1 min read
+  </div>
+
+  <p>Возникла задача обработки <code>XML</code> в кодировке <code>Windows-1251</code>. Штатный форматтер <code>XML</code> в <code>MVC</code> <code>ASP.Net Core</code> умеет выполнять обработку только <code>UTF-8</code>. Но так же MVC поддерживает возможность создания собственных форматтеров.</p>
+<p>Сам форматтер <code>CustomXmlInputFormatter.cs</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp"><span style="color:#66d9ef">using</span> Microsoft.AspNetCore.Mvc.Formatters;
+<span style="color:#66d9ef">using</span> System;
+<span style="color:#66d9ef">using</span> System.Threading.Tasks;
+<span style="color:#66d9ef">using</span> System.Text;
+<span style="color:#66d9ef">using</span> Microsoft.Net.Http.Headers;
+<span style="color:#66d9ef">using</span> System.IO;
+<span style="color:#66d9ef">using</span> System.Xml;
+<span style="color:#66d9ef">using</span> System.Xml.Serialization;
+
+<span style="color:#66d9ef">namespace</span> api
+{
+    <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomXmlInputFormatter</span>: TextInputFormatter
+    {
+        <span style="color:#66d9ef">public</span> CustomXmlInputFormatter()
+        {
+            SupportedMediaTypes.Add(MediaTypeHeaderValue.Parse(<span style="color:#e6db74">&#34;application/xml&#34;</span>));
+
+            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            <span style="color:#66d9ef">var</span> Windows1251 = CodePagesEncodingProvider.Instance.GetEncoding(<span style="color:#ae81ff">1251</span>);
+            SupportedEncodings.Add(Windows1251);
+            SupportedEncodings.Add(Encoding.UTF8);
+        }
+
+        <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">async</span> Task&lt;InputFormatterResult&gt; ReadRequestBodyAsync(InputFormatterContext context, Encoding encoding)
+        {
+            <span style="color:#66d9ef">if</span> (context == <span style="color:#66d9ef">null</span>)
+            {
+                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ArgumentNullException(nameof(context));
+            }
+
+            <span style="color:#66d9ef">if</span> (encoding == <span style="color:#66d9ef">null</span>)
+            {
+                <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> ArgumentNullException(nameof(encoding));
+            }
+
+            <span style="color:#66d9ef">var</span> request = context.HttpContext.Request;
+
+            <span style="color:#75715e">// Для поддержки Windows-1251 при дессмриализации
+</span><span style="color:#75715e"></span>            Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            <span style="color:#66d9ef">using</span> (<span style="color:#66d9ef">var</span> streamReader = context.ReaderFactory(request.Body, encoding))
+            {
+                <span style="color:#66d9ef">var</span> type = context.ModelType;
+
+                <span style="color:#66d9ef">try</span>
+                {
+                    <span style="color:#66d9ef">var</span> serializer = <span style="color:#66d9ef">new</span> XmlSerializer(type);
+                    <span style="color:#66d9ef">var</span> model = serializer.Deserialize(streamReader);
+
+                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">await</span> InputFormatterResult.SuccessAsync(model);
+                }
+                <span style="color:#66d9ef">catch</span> (Exception)
+                {
+                    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">await</span> InputFormatterResult.FailureAsync();
+                }
+            }
+        }
+    }
+}
+</code></pre></div><p>Подключение форматтера в <code>Startup.cs</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-csharp" data-lang="csharp">services.AddMvc(options =&gt;  
+{  
+    options.InputFormatters.Add(<span style="color:#66d9ef">new</span> CustomXmlInputFormatter());
+});
+</code></pre></div>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy; Author Name 2020 · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

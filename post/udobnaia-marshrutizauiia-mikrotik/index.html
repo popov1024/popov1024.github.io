@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.70.0" />
+
+  <title>Удобная маршрутизауия mikrotik &middot; Andrey Popov</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content=""/>
+
+  
+  <meta property="og:image" content="https://popov1024.github.ioimages/profile.png">
+
+  
+  <meta property="og:site_name" content="Andrey Popov"/>
+  <meta property="og:title" content="Удобная маршрутизауия mikrotik"/>
+  <meta property="og:description" content="Необходимо маршрутизировать несколько ip или подсетей по одному правилу.
+Решение Вариант &ldquo;в лоб&rdquo; прописывать все это в таблице маршрутизации."/>
+  <meta property="og:url" content="https://popov1024.github.io/post/udobnaia-marshrutizauiia-mikrotik/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2018-07-15T00:00:00Z"/>
+  <meta property="article:modified_time" content="2018-07-15T00:00:00Z"/>
+  <meta property="article:author" content="">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Andrey Popov",
+    "url" : "https://popov1024.github.io",
+    "image": "https://popov1024.github.ioimages/profile.png",
+    "description": ""
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Удобная маршрутизауия mikrotik",
+    "headline": "Удобная маршрутизауия mikrotik",
+    "datePublished": "2018-07-15T00:00:00Z",
+    "dateModified": "2018-07-15T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "",
+      "url": "https://popov1024.github.io"
+    },
+    "image": "https://popov1024.github.ioimages/profile.png",
+    "url": "https://popov1024.github.io/post/udobnaia-marshrutizauiia-mikrotik/",
+    "description": "Необходимо маршрутизировать несколько ip или подсетей по одному правилу.\nРешение Вариант \x26ldquo;в лоб\x26rdquo; прописывать все это в таблице маршрутизации."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://popov1024.github.iocss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://popov1024.github.iocss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://popov1024.github.iocss/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://popov1024.github.ioimages/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Andrey Popov</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://popov1024.github.io">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://github.com/popov1024" rel="me" title="Github">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrey_popov" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Удобная маршрутизауия mikrotik</h1>
+
+  <div class="post-date">
+    <time datetime="2018-07-15T00:00:00Z">Jul 15, 2018</time> · 1 min read
+  </div>
+
+  <p>Необходимо маршрутизировать несколько ip или подсетей по одному правилу.</p>
+<p>Решение
+Вариант &ldquo;в лоб&rdquo; прописывать все это в таблице маршрутизации. Все хорошо работает, когда подсетей несколько, а когда их достигает десяток, да и еще вперемешку на разные шлюзы&hellip;</p>
+<p><code>RouterOS</code> поддерживает работу со списками и маркировку пакетов.</p>
+<p>И так, создаем список <code>work</code>:</p>
+<pre><code class="language-sh">/ip firewall address-list
+add address=10.10.0.0/16 list=work
+add address=192.168.1.0/24 list=work
+</code></pre>
+<p>Делаем пометку <code>workt</code> пакетов согласно данного списка work:</p>
+<pre><code class="language-sh">/ip firewall mangle
+add action=mark-routing chain=prerouting dst-address-list=work new-routing-mark=workt
+</code></pre>
+<p>Собственно маршрутизация, согласно пометки <code>workt</code>:</p>
+<pre><code class="language-sh">/ip route
+add distance=1 gateway=vpn-work routing-mark=workt
+</code></pre>
+<p>Теперь достаточно в список <code>work</code> внести новый <code>ip</code> или подсеть, и он будет маршрутизироваться согласно правилам для этого листа.</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy; Andrey Popov 2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

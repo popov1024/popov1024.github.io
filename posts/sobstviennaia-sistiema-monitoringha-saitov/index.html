@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.70.0" />
+
+  <title>Собственная система мониторинга сайтов &middot; Soho Theme</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en"/>
+
+  
+  <meta property="og:image" content="https://example.com/images/profile.png">
+
+  
+  <meta property="og:type" content="blog"/>
+  <meta property="og:site_name" content="Soho Theme"/><meta property="og:title" content="Собственная система мониторинга сайтов"/>
+  <meta property="og:url" content="https://example.com/posts/sobstviennaia-sistiema-monitoringha-saitov/"/>
+  <meta property="og:description" content="Те, кто занимается поддержкой сайтов рано или поздно задумывается как мониторить их доступность."/>
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Soho Theme",
+    "url" : "https://example.com/",
+    "image": "https://example.com/images/profile.png",
+    "description": ""
+  }
+  </script>
+
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://example.com/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://example.com/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://example.com/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://example.com/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Soho Theme</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://example.com/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="#" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="#" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="#" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Собственная система мониторинга сайтов</h1>
+
+  <div class="post-date">
+    <time datetime="2018-07-15T00:00:00Z">Jul 15, 2018</time> · 2 min read
+  </div>
+
+  <p>Те, кто занимается поддержкой сайтов рано или поздно задумывается как мониторить их доступность. Можно пойти по пути покупки услуг (или пользоваться бесплатными) соответствущих сервисов. Благо их много.</p>
+<p>Но тут всегда сталкиваемся с несколькими проблемами: периодичность опроса и гибкость настройки.</p>
+<p>Другой вариант поднять свой сервис мониторинга, о чем и пойдет далее речь.</p>
+<p>Для наших целей будем использовать следующие сервисы и технологии:</p>
+<ul>
+<li><a href="https://m.do.co/t/18905df36c8e">DigitalOcean (referal link)</a></li>
+<li><a href="https://mmonit.com/monit/">Monit</a></li>
+<li><a href="https://docker.com/">Docker</a></li>
+</ul>
+<h3 id="digitalocean">DigitalOcean</h3>
+<p>Тут все просто. Регистрируемся и создаем дроплет. Можно воспользоваться моей реферальной ссылкой <a href="https://m.do.co/t/18905df36c8e">DigitalOcean (referal link)</a>.
+Для наших целей подойдет с минимальными характеристиками (1Gb / 1CPU). Можно воспользоваться уже специльно подготовленным образом <code>One-click apps</code> с установленным <code>Docker</code>.</p>
+<p>Место расположение дроплета - тут по своему вкусу. В идеале в той стране, где нужно контролировать доступность. В хорошем варианте можно поднять несколько однотипных дроплетов в различных датацентрах.</p>
+<h3 id="monit">Monit</h3>
+<p>Monit - это легковесная система мониторинга. Как одним из видов мониторинга выступает проверка подключение к внешним сервисам по HTTP(S).</p>
+<p>Все настройки произвлдятся в виде <a href="https://github.com/popov1024/monit-alpine-docker/blob/master/monitrc">конфиг файлов</a> с использованием специализированного синтаксиса.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">check host example.com with address example.com
+    alert monit@example.com
+    <span style="color:#66d9ef">if</span> failed url http://example.com/ with timeout <span style="color:#ae81ff">5</span> seconds <span style="color:#66d9ef">for</span> <span style="color:#ae81ff">3</span> cycles <span style="color:#66d9ef">then</span> alert
+</code></pre></div><h3 id="docker">Docker</h3>
+<p>Можно установить сам <code>monit</code> и на этом остановиться. Но удобнее для переносимости и утилизации системных ресурсов (вдруг мы еще что-то захотим запускать одновременно) использовать <code>Docker</code>. Создаем <code>docker-compose.yml</code>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">version: <span style="color:#e6db74">&#39;2&#39;</span>
+services:
+  monit:
+    image: monit-alpine
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    hostname: monit
+    logging:
+      driver: json-file
+      options:
+        max-size: <span style="color:#e6db74">&#34;10m&#34;</span>
+        max-file: <span style="color:#e6db74">&#34;5&#34;</span>
+    volumes:
+      - <span style="color:#e6db74">&#39;./monit/monit.d/:/etc/monit.d/&#39;</span>
+      - <span style="color:#e6db74">&#39;./monit/monitrc:/etc/monitrc&#39;</span>
+    restart: always
+</code></pre></div><p>и создаем в этой же директории <code>Dockerfile</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">FROM alpine:latest
+
+RUN apk --no-cache add monit
+
+VOLUME /etc/monit.d/
+
+EXPOSE <span style="color:#ae81ff">2812</span>
+
+CMD <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;monit&#34;</span>, <span style="color:#e6db74">&#34;-I&#34;</span>, <span style="color:#e6db74">&#34;-B&#34;</span><span style="color:#f92672">]</span>
+</code></pre></div><p>Запускаем стандартно:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">docker-compose up -d
+</code></pre></div>
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy; Author Name 2020 · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

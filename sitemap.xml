@@ -1,15 +1,127 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
     <loc>https://popov1024.github.io/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/gitlab-ci-and-dotnet-test/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/</loc>
+    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/printserver-na-bazu-raspberrypizero/</loc>
+    <lastmod>2019-07-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/modem_mt-pon-at-4_zte_f660/</loc>
+    <lastmod>2018-12-04T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/mikrotik-ad/</loc>
+    <lastmod>2018-11-13T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/</loc>
+    <lastmod>2018-07-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/sobstviennaia-sistiema-monitoringha-saitov/</loc>
+    <lastmod>2018-07-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/udobnaia-marshrutizauiia-mikrotik/</loc>
+    <lastmod>2018-07-15T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/docker-root-dir/</loc>
+    <lastmod>2018-04-30T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/asp-net-core-custom-xml-formatter/</loc>
+    <lastmod>2018-04-09T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/1s-priedpriiatiie-8-i-priedstavlieniie-uid/</loc>
+    <lastmod>2017-12-21T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/powershell-soap/</loc>
+    <lastmod>2013-11-18T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/</loc>
+    <lastmod>2013-03-16T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/vostanovlieniie/</loc>
+    <lastmod>2011-08-29T00:00:00+03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/post/skolko-nuzhno-prishchiepok/</loc>
+    <lastmod>2011-08-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://popov1024.github.io/categories/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://popov1024.github.io/tags/index/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

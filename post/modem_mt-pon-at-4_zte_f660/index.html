@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.70.0" />
+
+  <title>Модем MT-PON-AT-4 (ZTE F660) &middot; Andrey Popov</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content=""/>
+
+  
+  <meta property="og:image" content="https://popov1024.github.ioimages/profile.png">
+
+  
+  <meta property="og:site_name" content="Andrey Popov"/>
+  <meta property="og:title" content="Модем MT-PON-AT-4 (ZTE F660)"/>
+  <meta property="og:description" content="PON модем MT-PON-AT-4 (ZTE F660) имеет возможность доступа по telnet. telnet 192."/>
+  <meta property="og:url" content="https://popov1024.github.io/post/modem_mt-pon-at-4_zte_f660/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2018-12-04T00:00:00Z"/>
+  <meta property="article:modified_time" content="2018-12-04T00:00:00Z"/>
+  <meta property="article:author" content="">
+  
+  
+  
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Andrey Popov",
+    "url" : "https://popov1024.github.io",
+    "image": "https://popov1024.github.ioimages/profile.png",
+    "description": ""
+  }
+  </script>
+
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Модем MT-PON-AT-4 (ZTE F660)",
+    "headline": "Модем MT-PON-AT-4 (ZTE F660)",
+    "datePublished": "2018-12-04T00:00:00Z",
+    "dateModified": "2018-12-04T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "",
+      "url": "https://popov1024.github.io"
+    },
+    "image": "https://popov1024.github.ioimages/profile.png",
+    "url": "https://popov1024.github.io/post/modem_mt-pon-at-4_zte_f660/",
+    "description": "PON модем MT-PON-AT-4 (ZTE F660) имеет возможность доступа по telnet. telnet 192."
+  }
+  </script>
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://popov1024.github.iocss/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://popov1024.github.iocss/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://popov1024.github.iocss/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://popov1024.github.ioimages/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Andrey Popov</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://popov1024.github.io">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="https://github.com/popov1024" rel="me" title="Github">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="https://twitter.com/andrey_popov" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>Модем MT-PON-AT-4 (ZTE F660)</h1>
+
+  <div class="post-date">
+    <time datetime="2018-12-04T00:00:00Z">Dec 4, 2018</time> · 1 min read
+  </div>
+
+  <p>PON модем <code>MT-PON-AT-4</code> (<code>ZTE F660</code>) имеет возможность доступа по telnet.
+<img src="/content/images/2018/12/Screenshot-2018-12-04-22.25.16.png" alt="Настройка доступа по telnet чере Web-интерфейс"></p>
+<pre><code class="language-shell">telnet 192.168.1.1
+</code></pre>
+<p>Login: <code>root</code>, password: <code>Zte521</code>.</p>
+<p>Для конфигураирования модема использвется команда <code>sendcmd</code>. Команда позволяет управлять тремя прилоджениями: <code>1</code>, <code>2</code> и <code>3</code> :).
+Например, <code>sendcmd 1 -p</code> покажет список разделов (некие <code>PCB</code>). Все настройки хранятся в <code>DB</code>. Список таблиц можно получить командой <code>sendcmd 1 DB all</code>.
+Данные всех таблиц можно просматривать и изменять.
+Например, <code>sendcmd 1 DB p UserInfo</code> выведет все записи пользователей с паролями:</p>
+<pre><code class="language-xml">&lt;Tbl name=&quot;UserInfo&quot; RowCount=&quot;4&quot;&gt;
+        &lt;Row No=&quot;0&quot;&gt;
+                &lt;DM name=&quot;ViewName&quot; val=&quot;IGD.UserIF.UserInfo1&quot;/&gt;
+                &lt;DM name=&quot;Type&quot; val=&quot;1&quot;/&gt;
+                &lt;DM name=&quot;Enable&quot; val=&quot;1&quot;/&gt;
+                &lt;DM name=&quot;Username&quot; val=&quot;admin&quot;/&gt;
+                &lt;DM name=&quot;Password&quot; val=&quot;admin&quot;/&gt;
+                &lt;DM name=&quot;Right&quot; val=&quot;1&quot;/&gt;
+        &lt;/Row&gt;
+        &lt;Row No=&quot;1&quot;&gt;
+                &lt;DM name=&quot;ViewName&quot; val=&quot;IGD.UserIF.UserInfo2&quot;/&gt;
+                &lt;DM name=&quot;Type&quot; val=&quot;1&quot;/&gt;
+                &lt;DM name=&quot;Enable&quot; val=&quot;1&quot;/&gt;
+                &lt;DM name=&quot;Username&quot; val=&quot;user&quot;/&gt;
+                &lt;DM name=&quot;Password&quot; val=&quot;user&quot;/&gt;
+                &lt;DM name=&quot;Right&quot; val=&quot;2&quot;/&gt;
+        &lt;/Row&gt;
+        &lt;Row No=&quot;2&quot;&gt;
+                &lt;DM name=&quot;ViewName&quot; val=&quot;&quot;/&gt;
+                &lt;DM name=&quot;Type&quot; val=&quot;0&quot;/&gt;
+                &lt;DM name=&quot;Enable&quot; val=&quot;0&quot;/&gt;
+                &lt;DM name=&quot;Username&quot; val=&quot;&quot;/&gt;
+                &lt;DM name=&quot;Password&quot; val=&quot;&quot;/&gt;
+                &lt;DM name=&quot;Right&quot; val=&quot;0&quot;/&gt;
+        &lt;/Row&gt;
+        &lt;Row No=&quot;3&quot;&gt;
+                &lt;DM name=&quot;ViewName&quot; val=&quot;&quot;/&gt;
+                &lt;DM name=&quot;Type&quot; val=&quot;0&quot;/&gt;
+                &lt;DM name=&quot;Enable&quot; val=&quot;0&quot;/&gt;
+                &lt;DM name=&quot;Username&quot; val=&quot;&quot;/&gt;
+                &lt;DM name=&quot;Password&quot; val=&quot;&quot;/&gt;
+                &lt;DM name=&quot;Right&quot; val=&quot;0&quot;/&gt;
+        &lt;/Row&gt;
+&lt;/Tbl&gt;
+</code></pre>
+<p>Командой <code>sendcmd 1 DB p FWLevel</code> просмотреть настройки фаревола:</p>
+<pre><code class="language-xml">&lt;Tbl name=&quot;FWLevel&quot; RowCount=&quot;1&quot;&gt;
+        &lt;Row No=&quot;0&quot;&gt;
+                &lt;DM name=&quot;Level&quot; val=&quot;1&quot;/&gt;
+                &lt;DM name=&quot;AntiAttack&quot; val=&quot;1&quot;/&gt;
+        &lt;/Row&gt;
+&lt;/Tbl&gt;
+</code></pre>
+<p>Командой <code>sendcmd 1 DB set FWLevel 0 AntiAttack 0</code> можно отключить <code>Anti-Hacking Protection</code>.</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy; Andrey Popov 2020 · 
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

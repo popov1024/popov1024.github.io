@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="generator" content="Hugo 0.70.0" />
+
+  <title>1С:Предприятие &#43; Ant &#43; jenkins &middot; Soho Theme</title>
+
+  <meta name="description" content="" />
+
+  
+  <meta property="og:locale" content="en"/>
+
+  
+  <meta property="og:image" content="https://example.com/images/profile.png">
+
+  
+  <meta property="og:type" content="blog"/>
+  <meta property="og:site_name" content="Soho Theme"/><meta property="og:title" content="1С:Предприятие &#43; Ant &#43; jenkins"/>
+  <meta property="og:url" content="https://example.com/posts/1s-priedpriiatiie-ant-jenkins/"/>
+  <meta property="og:description" content="1С:Предприятие обладает очень скудными средствами разработки и интеграции. Однако выжать максимум автоматизации сборки и публикации можно."/>
+
+  <script type="application/ld+json">
+  {
+    "@context" : "http://schema.org",
+    "@type" : "Blog",
+    "name": "Soho Theme",
+    "url" : "https://example.com/",
+    "image": "https://example.com/images/profile.png",
+    "description": ""
+  }
+  </script>
+
+  
+
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://example.com/css/print.css"
+        media="print">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://example.com/css/poole.css">
+
+  <link type="text/css"
+        rel="stylesheet"
+        href="https://example.com/css/hyde.css">
+
+  
+
+
+  
+
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&display=swap">
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk="
+        crossorigin="anonymous" />
+
+  <link rel="apple-touch-icon-precomposed"
+        sizes="144x144"
+        href="/apple-touch-icon-144-precomposed.png">
+
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  </head>
+<body>
+  <aside class="sidebar">
+  <div class="container">
+    <div class="sidebar-about">
+      
+        
+        <div class="author-image">
+          <img src="https://example.com/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+        </div>
+        
+      
+
+      <h1>Soho Theme</h1>
+
+      
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li>
+          <a href="https://example.com/">Home</a>
+        </li>
+        <li>
+          <a href="/posts/"> Posts </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="social-icons">
+      
+      <a href="#" rel="me" title="Linkedin">
+        <i class="fab fa-linkedin" aria-hidden="true"></i>
+      </a>
+      
+      <a href="#" rel="me" title="GitHub">
+        <i class="fab fa-github" aria-hidden="true"></i>
+      </a>
+      
+      <a href="#" rel="me" title="Twitter">
+        <i class="fab fa-twitter" aria-hidden="true"></i>
+      </a>
+      
+    </section>
+  </div>
+</aside>
+
+
+  <main class="content container">
+  <div class="post">
+  <h1>1С:Предприятие &#43; Ant &#43; jenkins</h1>
+
+  <div class="post-date">
+    <time datetime="2013-03-16T00:00:00Z">Mar 16, 2013</time> · 3 min read
+  </div>
+
+  <p>1С:Предприятие обладает очень скудными средствами разработки и интеграции. Однако выжать максимум автоматизации сборки и публикации можно.
+Мои проекты имеют следующий жизненный цикл:</p>
+<ol>
+<li>Внесение изменений в код согласно <code>Jira</code></li>
+<li>Выпуск тестовой сборки</li>
+<li>Исправление ошибок по необходимости</li>
+<li>Выпуск релиза (проверка конфигурации, формирование <code>cf</code> + <code>cfu</code>, формирование отчета по измененным объектам хранилища конфигурации)</li>
+<li>Изменение версии в хранилище конфигурации</li>
+</ol>
+<p>Для выпуска релиза мной разработан <code>build.xml</code> для <code>Apache Ant</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-xml" data-lang="xml"><span style="color:#f92672">&lt;project</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;kisnpo&#34;</span> <span style="color:#a6e22e">default=</span><span style="color:#e6db74">&#34;build&#34;</span><span style="color:#f92672">&gt;</span>
+    <span style="color:#f92672">&lt;description&gt;</span>kisnpo build<span style="color:#f92672">&lt;/description&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">environment=</span><span style="color:#e6db74">&#34;env&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;rep&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;tcp://share\myproject\&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;replogin&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;login&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;reppassword&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;ibname&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;c:\ib\myproject&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;ib&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/F${ibname}&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;iblogin&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;login&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;ibpassword&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;password&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;connectionstring&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;Usr=&#34;</span><span style="color:#960050;background-color:#1e0010">${iblogin}&#34;;</span><span style="color:#a6e22e">Pwd=</span><span style="color:#e6db74">&#34;${ibpassword}&#34;</span><span style="color:#960050;background-color:#1e0010">;</span><span style="color:#a6e22e">File=</span><span style="color:#e6db74">&#34;${ibname}&#34;</span><span style="color:#960050;background-color:#1e0010">;&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;1cbin&#34;</span> <span style="color:#a6e22e">location=</span><span style="color:#e6db74">&#34;C:\Program Files (x86)\1cv81\bin\1cv8.exe&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;1cbincom&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;V81.COMConnector&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;builds&#34;</span> <span style="color:#a6e22e">location=</span><span style="color:#e6db74">&#34;${env.WORKSPACE}&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;publishdebug&#34;</span> <span style="color:#a6e22e">location=</span><span style="color:#e6db74">&#34;\\ftp\project-test&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;publish&#34;</span> <span style="color:#a6e22e">location=</span><span style="color:#e6db74">&#34;\\ftp\project&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;NBegin&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;property</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;NEnd&#34;</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;1&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;target</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;init&#34;</span> <span style="color:#a6e22e">depends=</span><span style="color:#e6db74">&#34;build-version&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;fail</span> <span style="color:#a6e22e">if=</span><span style="color:#e6db74">&#34;version_present&#34;</span> <span style="color:#a6e22e">message=</span><span style="color:#e6db74">&#34;Version ${version} is builed&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;echo</span> <span style="color:#a6e22e">message=</span><span style="color:#e6db74">&#34;ok&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/target&gt;</span>
+    <span style="color:#f92672">&lt;target</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;build-version&#34;</span> <span style="color:#a6e22e">unless=</span><span style="color:#e6db74">&#34;version&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;exec</span> <span style="color:#a6e22e">executable=</span><span style="color:#e6db74">&#34;powershell.exe&#34;</span> <span style="color:#a6e22e">output=</span><span style="color:#e6db74">&#34;.version&#34;</span> <span style="color:#a6e22e">failonerror=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;$c=new-object -comobject \&#34;</span><span style="color:#960050;background-color:#1e0010">${1cbincom}\&#34;;&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;$b=$c.Connect(\&#34;</span><span style="color:#960050;background-color:#1e0010">${connectionstring}\&#34;);&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;$medata=[System.__ComObject].invokemember(\&#34;</span><span style="color:#960050;background-color:#1e0010">Metadata\&#34;,[System.Reflection.BindingFlags]::GetProperty,$null,$b,$null);&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;[String]$buildversion = [System.__ComObject].invokemember(\&#34;</span><span style="color:#960050;background-color:#1e0010">Version\&#34;,[System.Reflection.BindingFlags]::GetProperty,$null,$medata</span> <span style="color:#960050;background-color:#1e0010">,$null);&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;echo $buildversion;&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;$rb=[System.Runtime.Interopservices.Marshal]::ReleaseComObject($b);&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;$rc=[System.Runtime.Interopservices.Marshal]::ReleaseComObject($c)&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;/exec&gt;</span>
+        <span style="color:#f92672">&lt;loadfile</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;version&#34;</span> <span style="color:#a6e22e">srcFile=</span><span style="color:#e6db74">&#34;.version&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;filterchain&gt;</span>
+                <span style="color:#f92672">&lt;striplinebreaks/&gt;</span>
+            <span style="color:#f92672">&lt;/filterchain&gt;</span>
+        <span style="color:#f92672">&lt;/loadfile&gt;</span>
+        <span style="color:#f92672">&lt;available</span> <span style="color:#a6e22e">filepath=</span><span style="color:#e6db74">&#34;${builds}&#34;</span> <span style="color:#a6e22e">file=</span><span style="color:#e6db74">&#34;${version}&#34;</span> <span style="color:#a6e22e">type=</span><span style="color:#e6db74">&#34;dir&#34;</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;version_present&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;echo</span> <span style="color:#a6e22e">message=</span><span style="color:#e6db74">&#34;ok&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/target&gt;</span>
+    <span style="color:#f92672">&lt;target</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;clean&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;delete</span> <span style="color:#a6e22e">file=</span><span style="color:#e6db74">&#34;.version&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;delete</span> <span style="color:#a6e22e">file=</span><span style="color:#e6db74">&#34;.checkerror&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;delete</span> <span style="color:#a6e22e">file=</span><span style="color:#e6db74">&#34;.updatescf&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;delete</span> <span style="color:#a6e22e">file=</span><span style="color:#e6db74">&#34;.resultcheck&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;delete</span> <span style="color:#a6e22e">file=</span><span style="color:#e6db74">&#34;.report&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;echo</span> <span style="color:#a6e22e">message=</span><span style="color:#e6db74">&#34;ok&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/target&gt;</span>
+    <span style="color:#f92672">&lt;target</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;update&#34;</span><span style="color:#f92672">&gt;</span>
+        <span style="color:#f92672">&lt;exec</span> <span style="color:#a6e22e">executable=</span><span style="color:#e6db74">&#34;${1cbin}&#34;</span> <span style="color:#a6e22e">failonerror=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;CONFIG&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;${ib}&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/N${iblogin}&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/P${ibpassword}&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryF${rep}&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryN${replogin}&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryP${reppassword}&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryUpdateCfg&#34;</span><span style="color:#f92672">/&gt;</span>
+            <span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;-force /UpdateDBCfg&#34;</span><span style="color:#f92672">/&gt;</span>
+        <span style="color:#f92672">&lt;/exec&gt;</span>
+        <span style="color:#f92672">&lt;echo</span> <span style="color:#a6e22e">message=</span><span style="color:#e6db74">&#34;ok&#34;</span><span style="color:#f92672">/&gt;</span>
+    <span style="color:#f92672">&lt;/target&gt;</span>
+	<span style="color:#f92672">&lt;target</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;check&#34;</span> <span style="color:#a6e22e">depends=</span><span style="color:#e6db74">&#34;update&#34;</span><span style="color:#f92672">&gt;</span>
+		<span style="color:#f92672">&lt;exec</span> <span style="color:#a6e22e">executable=</span><span style="color:#e6db74">&#34;${1cbin}&#34;</span> <span style="color:#a6e22e">output=</span><span style="color:#e6db74">&#34;.resultcheck&#34;</span> <span style="color:#a6e22e">failonerror=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;CONFIG&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;${ib}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/N${iblogin}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/P${ibpassword}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryF${rep}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryN${replogin}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryP${reppassword}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/CheckConfig&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;-IncorrectReferences&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;-Client&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;-ClientServer&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;-ExternalConnectionServer&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;-ExternalConnection&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;-Server&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;-DistributiveModules&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;-ConfigLogicalIntegrity&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/DumpResult .checkerror&#34;</span><span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;/exec&gt;</span>
+		<span style="color:#f92672">&lt;loadfile</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;checkerror&#34;</span> <span style="color:#a6e22e">srcFile=</span><span style="color:#e6db74">&#34;.checkerror&#34;</span> <span style="color:#a6e22e">encoding=</span><span style="color:#e6db74">&#34;utf-8&#34;</span><span style="color:#f92672">&gt;</span>
+			<span style="color:#f92672">&lt;filterchain&gt;</span>
+				<span style="color:#f92672">&lt;tokenfilter&gt;</span>
+					<span style="color:#f92672">&lt;containsregex</span> <span style="color:#a6e22e">pattern=</span><span style="color:#e6db74">&#34;^[^0-9\-]+(0)$&#34;</span><span style="color:#f92672">/&gt;</span>
+				<span style="color:#f92672">&lt;/tokenfilter&gt;</span>
+			<span style="color:#f92672">&lt;/filterchain&gt;</span>
+		<span style="color:#f92672">&lt;/loadfile&gt;</span>
+		<span style="color:#f92672">&lt;fail</span> <span style="color:#a6e22e">unless=</span><span style="color:#e6db74">&#34;checkerror&#34;</span><span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;echo</span> <span style="color:#a6e22e">message=</span><span style="color:#e6db74">&#34;ok&#34;</span><span style="color:#f92672">/&gt;</span>
+	<span style="color:#f92672">&lt;/target&gt;</span>
+	<span style="color:#f92672">&lt;target</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;build&#34;</span> <span style="color:#a6e22e">depends=</span><span style="color:#e6db74">&#34;check,init&#34;</span> <span style="color:#a6e22e">unless=</span><span style="color:#e6db74">&#34;version_present&#34;</span><span style="color:#f92672">&gt;</span>
+		<span style="color:#f92672">&lt;exec</span> <span style="color:#a6e22e">executable=</span><span style="color:#e6db74">&#34;cmd.exe&#34;</span><span style="color:#f92672">&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/c&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;rd&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;.last&#34;</span><span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;/exec&gt;</span>
+		<span style="color:#f92672">&lt;echo</span> <span style="color:#a6e22e">message=</span><span style="color:#e6db74">&#34;Build version is ${version}&#34;</span><span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;exec</span> <span style="color:#a6e22e">executable=</span><span style="color:#e6db74">&#34;powershell.exe&#34;</span> <span style="color:#a6e22e">output=</span><span style="color:#e6db74">&#34;.updatescf&#34;</span> <span style="color:#a6e22e">failonerror=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;[String]$p=\&#34;</span><span style="color:#960050;background-color:#1e0010">\&#34;;&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;ls ${builds}\* -Include 1cv8.cf -Recurse | split-path -parent | split-path -leaf | foreach {$p = $p + \&#34;</span> <span style="color:#960050;background-color:#1e0010">-f</span> <span style="color:#960050;background-color:#1e0010">$_\1cv8.cf</span> <span style="color:#960050;background-color:#1e0010">-v</span> <span style="color:#960050;background-color:#1e0010">$_</span> <span style="color:#960050;background-color:#1e0010">\&#34;};&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;echo $p&#34;</span><span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;/exec&gt;</span>
+		<span style="color:#f92672">&lt;loadfile</span> <span style="color:#a6e22e">property=</span><span style="color:#e6db74">&#34;updatescf&#34;</span> <span style="color:#a6e22e">srcFile=</span><span style="color:#e6db74">&#34;.updatescf&#34;</span><span style="color:#f92672">&gt;</span>
+			<span style="color:#f92672">&lt;filterchain&gt;</span>
+				<span style="color:#f92672">&lt;striplinebreaks/&gt;</span>
+			<span style="color:#f92672">&lt;/filterchain&gt;</span>
+		<span style="color:#f92672">&lt;/loadfile&gt;</span>
+		<span style="color:#f92672">&lt;exec</span> <span style="color:#a6e22e">executable=</span><span style="color:#e6db74">&#34;${1cbin}&#34;</span> <span style="color:#a6e22e">output=</span><span style="color:#e6db74">&#34;.resultcheck&#34;</span> <span style="color:#a6e22e">failonerror=</span><span style="color:#e6db74">&#34;true&#34;</span><span style="color:#f92672">&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;CONFIG&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;${ib}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/N${iblogin}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/P${ibpassword}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryF${rep}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryN${replogin}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryP${reppassword}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/CreateDistributionFiles -cffile ${version}\1cv8.cf -cfufile ${version}\1cv8.cfu&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;${updatessubcf}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;${updatescf}&#34;</span><span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;/exec&gt;</span>
+		<span style="color:#f92672">&lt;sleep</span> <span style="color:#a6e22e">seconds=</span><span style="color:#e6db74">&#34;30&#34;</span><span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;exec</span> <span style="color:#a6e22e">executable=</span><span style="color:#e6db74">&#34;cmd.exe&#34;</span><span style="color:#f92672">&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/c&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;mklink&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/J&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;.last&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;${version}&#34;</span><span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;/exec&gt;</span>
+		<span style="color:#f92672">&lt;echo</span> <span style="color:#a6e22e">message=</span><span style="color:#e6db74">&#34;ok&#34;</span><span style="color:#f92672">/&gt;</span>
+	<span style="color:#f92672">&lt;/target&gt;</span>
+	<span style="color:#f92672">&lt;target</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;publishdebug&#34;</span> <span style="color:#a6e22e">depends=</span><span style="color:#e6db74">&#34;build-version&#34;</span> <span style="color:#a6e22e">if=</span><span style="color:#e6db74">&#34;${publishdebugenable}&#34;</span><span style="color:#f92672">&gt;</span>
+		<span style="color:#f92672">&lt;copy</span> <span style="color:#a6e22e">todir=</span><span style="color:#e6db74">&#34;${publishdebug}/${version}&#34;</span><span style="color:#f92672">&gt;</span>
+			<span style="color:#f92672">&lt;fileset</span> <span style="color:#a6e22e">dir=</span><span style="color:#e6db74">&#34;${builds}/${version}&#34;</span><span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;/copy&gt;</span>
+		<span style="color:#f92672">&lt;echo</span> <span style="color:#a6e22e">message=</span><span style="color:#e6db74">&#34;ok&#34;</span><span style="color:#f92672">/&gt;</span>
+	<span style="color:#f92672">&lt;/target&gt;</span>
+	<span style="color:#f92672">&lt;target</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;publish&#34;</span> <span style="color:#a6e22e">depends=</span><span style="color:#e6db74">&#34;build-version&#34;</span> <span style="color:#a6e22e">if=</span><span style="color:#e6db74">&#34;${publishenable}&#34;</span><span style="color:#f92672">&gt;</span>
+		<span style="color:#f92672">&lt;copy</span> <span style="color:#a6e22e">todir=</span><span style="color:#e6db74">&#34;${publish}/${version}&#34;</span><span style="color:#f92672">&gt;</span>
+			<span style="color:#f92672">&lt;fileset</span> <span style="color:#a6e22e">dir=</span><span style="color:#e6db74">&#34;${builds}/${version}&#34;</span><span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;/copy&gt;</span>
+		<span style="color:#f92672">&lt;echo</span> <span style="color:#a6e22e">message=</span><span style="color:#e6db74">&#34;ok&#34;</span><span style="color:#f92672">/&gt;</span>
+	<span style="color:#f92672">&lt;/target&gt;</span>
+	<span style="color:#f92672">&lt;target</span> <span style="color:#a6e22e">name=</span><span style="color:#e6db74">&#34;report&#34;</span><span style="color:#f92672">&gt;</span>
+		<span style="color:#f92672">&lt;exec</span> <span style="color:#a6e22e">executable=</span><span style="color:#e6db74">&#34;${1cbin}&#34;</span><span style="color:#f92672">&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;CONFIG&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;${ib}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/N${iblogin}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/P${ibpassword}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryF${rep}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryN${replogin}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryP${reppassword}&#34;</span><span style="color:#f92672">/&gt;</span>
+			<span style="color:#f92672">&lt;arg</span> <span style="color:#a6e22e">value=</span><span style="color:#e6db74">&#34;/ConfigurationRepositoryReport ${version}/.report -NBegin ${NBegin} -NEnd ${NEnd} -GroupByObject -GroupByComment&#34;</span><span style="color:#f92672">/&gt;</span>
+		<span style="color:#f92672">&lt;/exec&gt;</span>
+		<span style="color:#f92672">&lt;sleep</span> <span style="color:#a6e22e">seconds=</span><span style="color:#e6db74">&#34;30&#34;</span><span style="color:#f92672">/&gt;</span>
+	<span style="color:#f92672">&lt;/target&gt;</span>
+<span style="color:#f92672">&lt;/project&gt;</span>
+</code></pre></div><p>Данный build.xml подразумевает следующую структуру каталогов:</p>
+<pre><code class="language-none" data-lang="none">&lt;Builds&gt;
+    [Project name]
+        [.last]      - ссылка на последнюю мажорную версию
+        [Version 1]
+        [Version 2]
+        ...
+        [Version n]
+            [.last]  - ссылка на последнюю минорную версию
+            [Buld 1]
+            [Buld 2]
+            ...
+            [Buld m]
+</code></pre><p>Например:</p>
+<pre><code class="language-none" data-lang="none">MyProject
+    [.last]
+    [1.0.1]
+        [.last]
+        [1.0.1.1]
+        [1.0.1.2]
+        [1.0.1.3]
+        [1.0.1.4]
+    [1.0.2]
+        [.last]
+        [1.0.1.4] - ссылка на предыдущую последнюю (релизную) мажорную сборку
+        [1.0.2.1]
+        [1.0.2.2]
+</code></pre><p>Для каждой мажорной версии в <code>jenkins</code> создается своя задача. <code>CI</code>-системы Bamboo или <code>Team City</code> позволяют добиться более удобного представления проектов, но пока мне хватает простоты и бесплатности <code>Jenkins</code>.</p>
+<p>Переключение версии никакими стандартными средствами <code>1С</code> не предусмотрено, так же никак нельзя автоматизированно узнать номера изменений хранилища конфигурации для построения отчета по измененным объектам.</p>
+<p>В чем плюсы такой связки? Во-первых, это упрощает и автоматизирует типовые этапы жизненного цикла проектов. Да - можно было написать все просто скриптами (как и было до этого), но в конечном счете этот путь приведет к написанию чего-нибудь наподобие <code>Apache Ant</code>, когда нужно на этапе выполнения определить зависимость целей и все необходимые параметры. Во-вторых, используя <code>Apache Ant</code> мы обеспечиваем возможность работы с различными современными <code>CI</code>.</p>
+
+</div>
+
+
+  </main>
+
+  <footer>
+  <div class="copyright">
+    &copy; Author Name 2020 · <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>
+  </div>
+</footer>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js"
+          integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
+          crossorigin="anonymous"></script>
+
+  
+
+  
+</body>
+</html>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="generator" content="Hugo 0.70.0" />
 
-  <title>404 Page not found &middot; Andrey Popov</title>
+  <title>Docker Root Dir &middot; Andrey Popov</title>
 
   <meta name="description" content="" />
 
@@ -16,10 +16,17 @@
   <meta property="og:image" content="https://popov1024.github.ioimages/profile.png">
 
   
-  <meta property="og:type" content="blog"/>
-  <meta property="og:site_name" content="Andrey Popov"/><meta property="og:title" content="404 Page not found"/>
-  <meta property="og:url" content="https://popov1024.github.io/404.html"/>
-  <meta property="og:description" content=""/>
+  <meta property="og:site_name" content="Andrey Popov"/>
+  <meta property="og:title" content="Docker Root Dir"/>
+  <meta property="og:description" content="По умолчанию Docker хранит свое окружение (образа, контейнеры и т.д.) в /var/lib/docker."/>
+  <meta property="og:url" content="https://popov1024.github.io/post/docker-root-dir/"/>
+  <meta property="og:type" content="article"/>
+  <meta property="article:published_time" content="2018-04-30T00:00:00Z"/>
+  <meta property="article:modified_time" content="2018-04-30T00:00:00Z"/>
+  <meta property="article:author" content="">
+  
+  
+  
 
   <script type="application/ld+json">
   {
@@ -32,6 +39,25 @@
   }
   </script>
 
+  
+  <script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BlogPosting",
+    "name": "Docker Root Dir",
+    "headline": "Docker Root Dir",
+    "datePublished": "2018-04-30T00:00:00Z",
+    "dateModified": "2018-04-30T00:00:00Z",
+    "author": {
+      "@type": "Person",
+      "name": "",
+      "url": "https://popov1024.github.io"
+    },
+    "image": "https://popov1024.github.ioimages/profile.png",
+    "url": "https://popov1024.github.io/post/docker-root-dir/",
+    "description": "По умолчанию Docker хранит свое окружение (образа, контейнеры и т.д.) в \/var\/lib\/docker."
+  }
+  </script>
   
 
 
@@ -113,11 +139,27 @@
 
 
   <main class="content container">
-  <h1>Page not found</h1>
-<p class="lead">
-    Sorry, we've misplaced that URL or it's pointing to something that doesn't exist.
-    <a href="https://popov1024.github.io">Head back home</a> to try finding it again.
-</p>
+  <div class="post">
+  <h1>Docker Root Dir</h1>
+
+  <div class="post-date">
+    <time datetime="2018-04-30T00:00:00Z">Apr 30, 2018</time> · 1 min read
+  </div>
+
+  <p>По умолчанию <code>Docker</code> хранит свое окружение (образа, контейнеры и т.д.) в <code>/var/lib/docker</code>. Однако часто может возникать проблема нехватки места из-за большого размера контейнеров при хранении в <code>/var</code> на корневом томе.</p>
+<p>В примере показн вариант переноса корневой дирректории <code>docker</code> на смонтированный том <code>/u01</code> :</p>
+<pre><code class="language-shell">sudo systemctl stop docker
+sudo cp -rp /var/lib/docker/ /u01/
+sudo mv /var/lib/docker /var/lib/docker.old
+sudo ln -s /u01/docker/ /var/lib/
+sudo systemctl daemon-reload
+sudo systemctl start docker
+</code></pre>
+<p>Для проверки выполним <code>docker info</code> и проверим значением параметра <code>Docker Root Dir:</code>.</p>
+
+</div>
+
+
   </main>
 
   <footer>
