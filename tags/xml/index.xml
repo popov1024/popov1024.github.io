@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>xml on Andrey Popov</title>
+    <link>https://popov1024.github.io/tags/xml/</link>
+    <description>Recent content in xml on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 09 Apr 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov1024.github.io/tags/xml/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ASP.Net Core custom XML formatter with Windows-1251</title>
+      <link>https://popov1024.github.io/post/asp-net-core-custom-xml-formatter/</link>
+      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/post/asp-net-core-custom-xml-formatter/</guid>
+      <description>Возникла задача обработки XML в кодировке Windows-1251. Штатный форматтер XML в MVC ASP.</description>
+    </item>
+    
+  </channel>
+</rss>

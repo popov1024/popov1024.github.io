@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>zte on Andrey Popov</title>
+    <link>https://popov1024.github.io/tags/zte/</link>
+    <description>Recent content in zte on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 04 Dec 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov1024.github.io/tags/zte/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Модем MT-PON-AT-4 (ZTE F660)</title>
+      <link>https://popov1024.github.io/post/modem_mt-pon-at-4_zte_f660/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/post/modem_mt-pon-at-4_zte_f660/</guid>
+      <description>PON модем MT-PON-AT-4 (ZTE F660) имеет возможность доступа по telnet. telnet 192.</description>
+    </item>
+    
+  </channel>
+</rss>

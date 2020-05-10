@@ -21,11 +21,11 @@ test: stage: test image: mcr.</description>
     </item>
     
     <item>
-      <title>Printserver на базу RaspberryPi</title>
-      <link>https://popov1024.github.io/post/printserver-na-bazu-raspberrypizero/</link>
+      <title>Printserver на базе RaspberryPi</title>
+      <link>https://popov1024.github.io/post/printserver-raspberrypizero/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://popov1024.github.io/post/printserver-na-bazu-raspberrypizero/</guid>
+      <guid>https://popov1024.github.io/post/printserver-raspberrypizero/</guid>
       <description>Raspberry Pi отлично подходит для принтсервера. В моем случае используется RaspberryPi Zero W, подключаемый к сети по WiFi.</description>
     </item>
     

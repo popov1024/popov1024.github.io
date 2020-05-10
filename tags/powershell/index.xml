@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>powershell on Andrey Popov</title>
+    <link>https://popov1024.github.io/tags/powershell/</link>
+    <description>Recent content in powershell on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Mon, 18 Nov 2013 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov1024.github.io/tags/powershell/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>PowerShell SOAP</title>
+      <link>https://popov1024.github.io/post/powershell-soap/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/post/powershell-soap/</guid>
+      <description>Пример вызова метода Web сервиса посредством SOAP:
+$secpasswd = ConvertTo-SecureString &amp;quot;password&amp;quot; -AsPlainText -Force $mycreds = New-Object System.</description>
+    </item>
+    
+  </channel>
+</rss>

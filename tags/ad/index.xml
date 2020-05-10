@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ad on Andrey Popov</title>
+    <link>https://popov1024.github.io/tags/ad/</link>
+    <description>Recent content in ad on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 13 Nov 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov1024.github.io/tags/ad/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Mikrotik на страже рекламы</title>
+      <link>https://popov1024.github.io/post/mikrotik-ad/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/post/mikrotik-ad/</guid>
+      <description>Блокировка рекламы на Mikrotik можно настроить с помощью переоидиечкого запуска скрипта, который для url рекламного контента подменяет ip на 127.</description>
+    </item>
+    
+  </channel>
+</rss>

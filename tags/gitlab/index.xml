@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gitlab on Andrey Popov</title>
+    <link>https://popov1024.github.io/tags/gitlab/</link>
+    <description>Recent content in gitlab on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov1024.github.io/tags/gitlab/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Gitlab CI and dotnet test</title>
+      <link>https://popov1024.github.io/post/gitlab-ci-and-dotnet-test/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/post/gitlab-ci-and-dotnet-test/</guid>
+      <description>Подготовил задачу .gitlab-ci.yml для тестирования dotnet core приложений:
+test: stage: test image: mcr.</description>
+    </item>
+    
+  </channel>
+</rss>

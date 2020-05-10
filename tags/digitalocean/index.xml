@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>digitalocean on Andrey Popov</title>
+    <link>https://popov1024.github.io/tags/digitalocean/</link>
+    <description>Recent content in digitalocean on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 15 Jul 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://popov1024.github.io/tags/digitalocean/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Собственная система мониторинга сайтов</title>
+      <link>https://popov1024.github.io/post/sobstviennaia-sistiema-monitoringha-saitov/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/post/sobstviennaia-sistiema-monitoringha-saitov/</guid>
+      <description>Те, кто занимается поддержкой сайтов рано или поздно задумывается как мониторить их доступность.</description>
+    </item>
+    
+  </channel>
+</rss>

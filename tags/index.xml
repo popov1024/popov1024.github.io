@@ -5,9 +5,199 @@
     <link>https://popov1024.github.io/tags/</link>
     <description>Recent content in Tags on Andrey Popov</description>
     <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://popov1024.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>dotnet</title>
+      <link>https://popov1024.github.io/tags/dotnet/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/dotnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>gitlab</title>
+      <link>https://popov1024.github.io/tags/gitlab/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/gitlab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unittest</title>
+      <link>https://popov1024.github.io/tags/unittest/</link>
+      <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/unittest/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>printer</title>
+      <link>https://popov1024.github.io/tags/printer/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/printer/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>raspberrypi</title>
+      <link>https://popov1024.github.io/tags/raspberrypi/</link>
+      <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/raspberrypi/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>telnet</title>
+      <link>https://popov1024.github.io/tags/telnet/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/telnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>zte</title>
+      <link>https://popov1024.github.io/tags/zte/</link>
+      <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/zte/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ad</title>
+      <link>https://popov1024.github.io/tags/ad/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/ad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mikrotik</title>
+      <link>https://popov1024.github.io/tags/mikrotik/</link>
+      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/mikrotik/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>digitalocean</title>
+      <link>https://popov1024.github.io/tags/digitalocean/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/digitalocean/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://popov1024.github.io/tags/docker/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>monit</title>
+      <link>https://popov1024.github.io/tags/monit/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/monit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sms</title>
+      <link>https://popov1024.github.io/tags/sms/</link>
+      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/sms/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aspnet</title>
+      <link>https://popov1024.github.io/tags/aspnet/</link>
+      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/aspnet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>xml</title>
+      <link>https://popov1024.github.io/tags/xml/</link>
+      <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/xml/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>1С:Предприятие 8</title>
+      <link>https://popov1024.github.io/tags/1%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5-8/</link>
+      <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/1%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5-8/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>powershell</title>
+      <link>https://popov1024.github.io/tags/powershell/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/powershell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>soap</title>
+      <link>https://popov1024.github.io/tags/soap/</link>
+      <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/soap/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ant</title>
+      <link>https://popov1024.github.io/tags/ant/</link>
+      <pubDate>Sat, 16 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/ant/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jenkins</title>
+      <link>https://popov1024.github.io/tags/jenkins/</link>
+      <pubDate>Sat, 16 Mar 2013 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/jenkins/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ci/cd</title>
+      <link>https://popov1024.github.io/tags/ci/cd/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/ci/cd/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>index</title>
