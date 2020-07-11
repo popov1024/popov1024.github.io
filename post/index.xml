@@ -126,7 +126,7 @@ $secpasswd = ConvertTo-SecureString &amp;quot;password&amp;quot; -AsPlainText -F
     <item>
       <title>Востановление флешки Corsair Survivor</title>
       <link>https://popov1024.github.io/post/vostanovlieniie/</link>
-      <pubDate>Mon, 29 Aug 2011 00:00:00 +0300</pubDate>
+      <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
       
       <guid>https://popov1024.github.io/post/vostanovlieniie/</guid>
       <description>Казалось бы, что флешки Corsair Survivor неубиваемы&amp;hellip;
