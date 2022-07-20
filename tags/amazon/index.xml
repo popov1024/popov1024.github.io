@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>amazon on Andrey Popov</title>
+    <link>https://popov1024.github.io/tags/amazon/</link>
+    <description>Recent content in amazon on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://popov1024.github.io/tags/amazon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Установка apk на FireTV</title>
+      <link>https://popov1024.github.io/post/firetv-install-apk/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/post/firetv-install-apk/</guid>
+      <description>Для установк понадобится установленный Android SDK
+./adb connect 192.168.1.1 ./adb install ~/Downloads/VLC_v.</description>
+    </item>
+    
+  </channel>
+</rss>

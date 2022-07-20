@@ -1,288 +1,236 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://popov1024.github.io/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
+    <lastmod>2022-07-20T09:59:13+03:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://popov1024.github.io/post/</loc>
+    <lastmod>2022-07-20T09:59:13+03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://popov1024.github.io/post/vscode-forever/</loc>
+    <lastmod>2022-07-20T09:59:13+03:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://popov1024.github.io/tags/amazon/</loc>
+    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://popov1024.github.io/tags/android/</loc>
+    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://popov1024.github.io/tags/apk/</loc>
+    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://popov1024.github.io/tags/firetv/</loc>
+    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://popov1024.github.io/tags/</loc>
+    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
+    <loc>https://popov1024.github.io/post/firetv-install-apk/</loc>
+    <lastmod>2020-05-10T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url><url>
     <loc>https://popov1024.github.io/tags/dotnet/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/gitlab/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/gitlab-ci-and-dotnet-test/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://popov1024.github.io/post/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://popov1024.github.io/tags/</loc>
-    <lastmod>2020-04-17T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/unittest/</loc>
     <lastmod>2020-04-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/printer/</loc>
     <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/printserver-raspberrypizero/</loc>
     <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/raspberrypi/</loc>
     <lastmod>2019-07-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/telnet/</loc>
     <lastmod>2018-12-04T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/zte/</loc>
     <lastmod>2018-12-04T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/modem_mt-pon-at-4_zte_f660/</loc>
     <lastmod>2018-12-04T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/ad/</loc>
     <lastmod>2018-11-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/mikrotik/</loc>
     <lastmod>2018-11-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/mikrotik-ad/</loc>
     <lastmod>2018-11-13T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/digitalocean/</loc>
     <lastmod>2018-07-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/docker/</loc>
     <lastmod>2018-07-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/monit/</loc>
     <lastmod>2018-07-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/sms/</loc>
     <lastmod>2018-07-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/</loc>
     <lastmod>2018-07-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/sobstviennaia-sistiema-monitoringha-saitov/</loc>
     <lastmod>2018-07-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/udobnaia-marshrutizauiia-mikrotik/</loc>
     <lastmod>2018-07-15T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/docker-root-dir/</loc>
     <lastmod>2018-04-30T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/asp-net-core-custom-xml-formatter/</loc>
     <lastmod>2018-04-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/aspnet/</loc>
     <lastmod>2018-04-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/xml/</loc>
     <lastmod>2018-04-09T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/1%D1%81%D0%BF%D1%80%D0%B5%D0%B4%D0%BF%D1%80%D0%B8%D1%8F%D1%82%D0%B8%D0%B5-8/</loc>
     <lastmod>2017-12-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/1s-priedpriiatiie-8-i-priedstavlieniie-uid/</loc>
     <lastmod>2017-12-21T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/powershell/</loc>
     <lastmod>2013-11-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/powershell-soap/</loc>
     <lastmod>2013-11-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/soap/</loc>
     <lastmod>2013-11-18T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/</loc>
     <lastmod>2013-03-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/ant/</loc>
     <lastmod>2013-03-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/jenkins/</loc>
     <lastmod>2013-03-16T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/vostanovlieniie/</loc>
     <lastmod>2011-08-29T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/post/skolko-nuzhno-prishchiepok/</loc>
     <lastmod>2011-08-11T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/categories/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/ci/cd/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/tags/index/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://popov1024.github.io/series/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-  
 </urlset>

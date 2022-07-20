@@ -5,11 +5,7 @@
     <link>https://popov1024.github.io/tags/mikrotik/</link>
     <description>Recent content in mikrotik on Andrey Popov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 13 Nov 2018 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://popov1024.github.io/tags/mikrotik/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 13 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://popov1024.github.io/tags/mikrotik/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mikrotik на страже рекламы</title>
       <link>https://popov1024.github.io/post/mikrotik-ad/</link>
@@ -26,7 +22,7 @@
       
       <guid>https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/</guid>
       <description>Use_SSH_to_execute_commands
-ssh router &#39;/tool sms send usb1 &amp;quot;+375XXXXXXXXXX&amp;quot; message=&amp;quot;Hello, world&amp;quot;&#39;  </description>
+ssh router &#39;/tool sms send usb1 &amp;quot;+375XXXXXXXXXX&amp;quot; message=&amp;quot;Hello, world&amp;quot;&#39; </description>
     </item>
     
     <item>

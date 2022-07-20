@@ -5,10 +5,25 @@
     <link>https://popov1024.github.io/</link>
     <description>Recent content on Andrey Popov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 20 Jul 2022 09:59:13 +0300</lastBuildDate><atom:link href="https://popov1024.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vscode Forever</title>
+      <link>https://popov1024.github.io/post/vscode-forever/</link>
+      <pubDate>Wed, 20 Jul 2022 09:59:13 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/post/vscode-forever/</guid>
+      <description></description>
+    </item>
     
-	<atom:link href="https://popov1024.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <item>
+      <title>Установка apk на FireTV</title>
+      <link>https://popov1024.github.io/post/firetv-install-apk/</link>
+      <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://popov1024.github.io/post/firetv-install-apk/</guid>
+      <description>Для установк понадобится установленный Android SDK
+./adb connect 192.168.1.1 ./adb install ~/Downloads/VLC_v.</description>
+    </item>
     
     <item>
       <title>Gitlab CI and dotnet test</title>
@@ -54,7 +69,7 @@ test: stage: test image: mcr.</description>
       
       <guid>https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/</guid>
       <description>Use_SSH_to_execute_commands
-ssh router &#39;/tool sms send usb1 &amp;quot;+375XXXXXXXXXX&amp;quot; message=&amp;quot;Hello, world&amp;quot;&#39;  </description>
+ssh router &#39;/tool sms send usb1 &amp;quot;+375XXXXXXXXXX&amp;quot; message=&amp;quot;Hello, world&amp;quot;&#39; </description>
     </item>
     
     <item>
