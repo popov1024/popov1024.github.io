@@ -27,6 +27,62 @@
 
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type":"Person",
+      "@id": "https://popov1024.github.io/#author",
+      "name":  null ,
+      "image": {
+        "@type":"ImageObject",
+        
+        "url": "https://popov1024.github.io/images/profile.png"
+        
+      },
+      "description":  null 
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://popov1024.github.io/#website",
+      "url": "https://popov1024.github.io/",
+      "name": "Andrey Popov",
+      "description":  null ,
+      "publisher": {
+        "@id": "https://popov1024.github.io/#author"
+      },
+      "inLanguage": ""
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://popov1024.github.io/tags/telnet/#webpage",
+      "url": "https://popov1024.github.io/tags/telnet/",
+      "name": "telnet",
+      "isPartOf": {
+        "@id": "https://popov1024.github.io/#website"
+      },
+      "about": {
+         "@id": "https://popov1024.github.io/#author"
+      },
+      "dateModified": "2018-12-04T00:00:00+00:00",
+      "description": ,
+      "inLanguage": "",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "https://popov1024.github.io/tags/telnet/"
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+
   <link type="text/css"
         rel="stylesheet"
         href="/css/print.css"
@@ -69,7 +125,9 @@
       
         
         <div class="author-image">
-          <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+          <a href="https://popov1024.github.io/">
+            <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+          </a>
         </div>
         
       
@@ -111,21 +169,23 @@
   <ul class="posts">
   <h1>Tag: telnet</h1>
   <li>
-    <span>
-        <a href="https://popov1024.github.io/post/modem_mt-pon-at-4_zte_f660/">Модем MT-PON-AT-4 (ZTE F660)</a>
-        <time class="pull-right post-list" datetime="2018-12-04T00:00:00Z">Dec 4, 2018</time>
-    </span>
+    <div class="flex">
+      <a href="https://popov1024.github.io/post/modem_mt-pon-at-4_zte_f660/" class="truncate">Модем MT-PON-AT-4 (ZTE F660)</a>
+      <time class="nowrap" datetime="2018-12-04T00:00:00Z">Dec 4, 2018</time>
+    </div>
   </li>
 </ul>
   </main>
 
   <footer>
   <div>
-    &copy; Andrey Popov 2022
+    <p>
+      &copy; Andrey Popov 2022
 
-    
+      
 
-    
+      
+    </p>
   </div>
 </footer>
 
@@ -134,8 +194,14 @@
           integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
           crossorigin="anonymous"></script>
 
-  
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/soho.js"></script>
 
   
+
+    
+      
+    
 </body>
 </html>

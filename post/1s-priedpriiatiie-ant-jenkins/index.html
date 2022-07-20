@@ -32,6 +32,99 @@
 
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type":"Person",
+      "@id": "https://popov1024.github.io/#author",
+      "name":  null ,
+      "image": {
+        "@type":"ImageObject",
+        
+        "url": "https://popov1024.github.io/images/profile.png"
+        
+      },
+      "description":  null 
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://popov1024.github.io/#website",
+      "url": "https://popov1024.github.io/",
+      "name": "Andrey Popov",
+      "description":  null ,
+      "publisher": {
+        "@id": "https://popov1024.github.io/#author"
+      },
+      "inLanguage": ""
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/#webpage",
+      "url": "https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/",
+      "name": "1С:Предприятие + Ant + jenkins",
+      "isPartOf": {
+        "@id": "https://popov1024.github.io/#website"
+      },
+      "about": {
+         "@id": "https://popov1024.github.io/#author"
+      },
+      "datePublished": "2013-03-16T00:00:00+00:00",
+      "dateModified": "2013-03-16T00:00:00+00:00",
+      "description": "1С:Предприятие 8 - continius integration (Jenkins + Ant)",
+      "inLanguage": "",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/"
+          ]
+        }
+      ]
+    },
+    {
+      "@type": "Article",
+      "isPartOf": {
+        "@id": "https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/#webpage"
+      },
+      "mainEntityOfPage": {
+        "@id": "https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/#webpage"
+      },
+      "headline": "1С:Предприятие + Ant + jenkins",
+      "datePublished": "2013-03-16T00:00:00+00:00",
+      "dateModified": "2013-03-16T00:00:00+00:00",
+      "publisher": {
+        "@id": "https://popov1024.github.io/#author"
+      },
+      "keywords": [,
+        "ant",
+        "jenkins",
+        "ci/cd"
+      ],
+      "articleSection": [
+      ],
+      "inLanguage": "",
+      "author": {
+        "@type": "Person",
+        "name":  null 
+      },
+      "potentialAction": [
+        {
+          "@type": "CommentAction",
+          "name": "Comment",
+          "target": [
+            "https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/#comments"
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+
   <link type="text/css"
         rel="stylesheet"
         href="/css/print.css"
@@ -73,7 +166,9 @@
       
         
         <div class="author-image">
-          <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+          <a href="https://popov1024.github.io/">
+            <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+          </a>
         </div>
         
       
@@ -113,12 +208,14 @@
 
   <main class="content container">
   <div class="post">
-  <h1>1С:Предприятие &#43; Ant &#43; jenkins</h1>
+  <h1 class="title">1С:Предприятие &#43; Ant &#43; jenkins</h1>
+  
 
   <div class="post-date">
-    <time datetime="2013-03-16T00:00:00Z">Mar 16, 2013</time> &middot; 3 min read
+    <time datetime="2013-03-16T00:00:00Z">Mar 16, 2013</time> <span class="readtime">&middot; 3 min read</span>
   </div>
 
+  <div>
   <p>1С:Предприятие обладает очень скудными средствами разработки и интеграции. Однако выжать максимум автоматизации сборки и публикации можно.
 Мои проекты имеют следующий жизненный цикл:</p>
 <ol>
@@ -320,18 +417,73 @@
 <p>Переключение версии никакими стандартными средствами <code>1С</code> не предусмотрено, так же никак нельзя автоматизированно узнать номера изменений хранилища конфигурации для построения отчета по измененным объектам.</p>
 <p>В чем плюсы такой связки? Во-первых, это упрощает и автоматизирует типовые этапы жизненного цикла проектов. Да - можно было написать все просто скриптами (как и было до этого), но в конечном счете этот путь приведет к написанию чего-нибудь наподобие <code>Apache Ant</code>, когда нужно на этапе выполнения определить зависимость целей и все необходимые параметры. Во-вторых, используя <code>Apache Ant</code> мы обеспечиваем возможность работы с различными современными <code>CI</code>.</p>
 
+  </div>
+
+  
+<div>
+  <ul class="tags">
+  <li>
+    <a href="https://popov1024.github.io/tags/ant/" class="tag-link">ant</a>
+  </li>
+  
+  <li>
+    <a href="https://popov1024.github.io/tags/jenkins/" class="tag-link">jenkins</a>
+  </li>
+  
+  <li>
+    <a href="https://popov1024.github.io/tags/ci/cd/" class="tag-link">ci/cd</a>
+  </li>
+  </ul>
 </div>
 
 
+
+  <div class="share-buttons">
+  <a class="twitter-share-button"
+     href="#"
+     title="Share on Twitter"
+     data-url="https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/"
+     data-text="1С:Предприятие &#43; Ant &#43; jenkins"><i class="fab fa-twitter"></i></a>
+
+  <a class="linkedin-share-button"
+     href="#"
+     title="Share on LinkedIn"
+     data-url="https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/"
+     data-text="1С:Предприятие &#43; Ant &#43; jenkins"><i class="fab fa-linkedin-in"></i></a>
+
+  <a class="facebook-share-button"
+     href="#"
+     title="Share on Facebook"
+     data-url="https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/"
+     data-text="1С:Предприятие &#43; Ant &#43; jenkins"><i class="fab fa-facebook"></i></a>
+
+  <a class="telegram-share-button"
+     href="#"
+     title="Share on Telegram"
+     data-url="https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/"
+     data-text="1С:Предприятие &#43; Ant &#43; jenkins"><i class="fab fa-telegram"></i></a>
+
+  <a class="pinterest-share-button"
+     href="#"
+     title="Share on Pinterest"
+     data-url="https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/"
+     data-text="1С:Предприятие &#43; Ant &#43; jenkins"><i class="fab fa-pinterest"></i></a>
+</div>
+
+
+  
+</div>
   </main>
 
   <footer>
   <div>
-    &copy; Andrey Popov 2022
+    <p>
+      &copy; Andrey Popov 2022
 
-    
+      
 
-    
+      
+    </p>
   </div>
 </footer>
 
@@ -340,8 +492,14 @@
           integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
           crossorigin="anonymous"></script>
 
-  
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/soho.js"></script>
 
   
+
+    
+      
+    
 </body>
 </html>

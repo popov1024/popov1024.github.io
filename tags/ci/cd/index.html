@@ -27,6 +27,61 @@
 
 
 
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type":"Person",
+      "@id": "https://popov1024.github.io/#author",
+      "name":  null ,
+      "image": {
+        "@type":"ImageObject",
+        
+        "url": "https://popov1024.github.io/images/profile.png"
+        
+      },
+      "description":  null 
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://popov1024.github.io/#website",
+      "url": "https://popov1024.github.io/",
+      "name": "Andrey Popov",
+      "description":  null ,
+      "publisher": {
+        "@id": "https://popov1024.github.io/#author"
+      },
+      "inLanguage": ""
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://popov1024.github.io/tags/ci/cd/#webpage",
+      "url": "https://popov1024.github.io/tags/ci/cd/",
+      "name": "ci/cd",
+      "isPartOf": {
+        "@id": "https://popov1024.github.io/#website"
+      },
+      "about": {
+         "@id": "https://popov1024.github.io/#author"
+      },
+      "description": ,
+      "inLanguage": "",
+      "potentialAction": [
+        {
+          "@type": "ReadAction",
+          "target": [
+            "https://popov1024.github.io/tags/ci/cd/"
+          ]
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+
+
   <link type="text/css"
         rel="stylesheet"
         href="/css/print.css"
@@ -69,7 +124,9 @@
       
         
         <div class="author-image">
-          <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+          <a href="https://popov1024.github.io/">
+            <img src="/images/profile.png" class="img-circle img-headshot center" alt="Profile Picture">
+          </a>
         </div>
         
       
@@ -111,26 +168,28 @@
   <ul class="posts">
   <h1>Tag: ci/cd</h1>
   <li>
-    <span>
-        <a href="https://popov1024.github.io/post/gitlab-ci-and-dotnet-test/">Gitlab CI and dotnet test</a>
-        <time class="pull-right post-list" datetime="2020-04-17T00:00:00Z">Apr 17, 2020</time>
-    </span>
+    <div class="flex">
+      <a href="https://popov1024.github.io/post/gitlab-ci-and-dotnet-test/" class="truncate">Gitlab CI and dotnet test</a>
+      <time class="nowrap" datetime="2020-04-17T00:00:00Z">Apr 17, 2020</time>
+    </div>
   </li><li>
-    <span>
-        <a href="https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/">1С:Предприятие &#43; Ant &#43; jenkins</a>
-        <time class="pull-right post-list" datetime="2013-03-16T00:00:00Z">Mar 16, 2013</time>
-    </span>
+    <div class="flex">
+      <a href="https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/" class="truncate">1С:Предприятие &#43; Ant &#43; jenkins</a>
+      <time class="nowrap" datetime="2013-03-16T00:00:00Z">Mar 16, 2013</time>
+    </div>
   </li>
 </ul>
   </main>
 
   <footer>
   <div>
-    &copy; Andrey Popov 2022
+    <p>
+      &copy; Andrey Popov 2022
 
-    
+      
 
-    
+      
+    </p>
   </div>
 </footer>
 
@@ -139,8 +198,14 @@
           integrity="sha256-MAgcygDRahs+F/Nk5Vz387whB4kSK9NXlDN3w58LLq0="
           crossorigin="anonymous"></script>
 
-  
+
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/soho.js"></script>
 
   
+
+    
+      
+    
 </body>
 </html>
