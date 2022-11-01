@@ -5,14 +5,17 @@
     <link>https://popov1024.github.io/post/</link>
     <description>Recent content in Posts on Andrey Popov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 20 Jul 2022 09:59:13 +0300</lastBuildDate><atom:link href="https://popov1024.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Nov 2022 14:46:02 +0300</lastBuildDate><atom:link href="https://popov1024.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Vscode Forever</title>
-      <link>https://popov1024.github.io/post/vscode-forever/</link>
-      <pubDate>Wed, 20 Jul 2022 09:59:13 +0300</pubDate>
+      <title>App Badges</title>
+      <link>https://popov1024.github.io/post/app-badges/</link>
+      <pubDate>Tue, 01 Nov 2022 14:46:02 +0300</pubDate>
       
-      <guid>https://popov1024.github.io/post/vscode-forever/</guid>
-      <description></description>
+      <guid>https://popov1024.github.io/post/app-badges/</guid>
+      <description>Кнопки скачивания приложения из магазинов:
+GooglePlay https://play.google.com/intl/en_us/badges/
+AppStore https://developer.apple.com/app-store/marketing/guidelines/
+AppGallery https://developer.</description>
     </item>
     
     <item>
