@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vpn on Andrey Popov</title>
+    <link>https://popov1024.github.io/tags/vpn/</link>
+    <description>Recent content in vpn on Andrey Popov</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Thu, 06 Apr 2023 09:59:13 +0300</lastBuildDate><atom:link href="https://popov1024.github.io/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Настройка собственного VPN сервера на базе Wireguard</title>
+      <link>https://popov1024.github.io/post/wireguard/</link>
+      <pubDate>Thu, 06 Apr 2023 09:59:13 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/post/wireguard/</guid>
+      <description>Конфигурирование Wireguard сервера Первым делом требуется создать VPS сервер в каком-либо облачном провайдере.</description>
+    </item>
+    
+  </channel>
+</rss>

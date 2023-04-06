@@ -5,7 +5,34 @@
     <link>https://popov1024.github.io/tags/</link>
     <description>Recent content in Tags on Andrey Popov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 10 May 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://popov1024.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Apr 2023 09:59:13 +0300</lastBuildDate><atom:link href="https://popov1024.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>docker</title>
+      <link>https://popov1024.github.io/tags/docker/</link>
+      <pubDate>Thu, 06 Apr 2023 09:59:13 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mikrotik</title>
+      <link>https://popov1024.github.io/tags/mikrotik/</link>
+      <pubDate>Thu, 06 Apr 2023 09:59:13 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/mikrotik/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vpn</title>
+      <link>https://popov1024.github.io/tags/vpn/</link>
+      <pubDate>Thu, 06 Apr 2023 09:59:13 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/tags/vpn/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>amazon</title>
       <link>https://popov1024.github.io/tags/amazon/</link>
@@ -115,29 +142,11 @@
     </item>
     
     <item>
-      <title>mikrotik</title>
-      <link>https://popov1024.github.io/tags/mikrotik/</link>
-      <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://popov1024.github.io/tags/mikrotik/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>digitalocean</title>
       <link>https://popov1024.github.io/tags/digitalocean/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
       
       <guid>https://popov1024.github.io/tags/digitalocean/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://popov1024.github.io/tags/docker/</link>
-      <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      
-      <guid>https://popov1024.github.io/tags/docker/</guid>
       <description></description>
     </item>
     

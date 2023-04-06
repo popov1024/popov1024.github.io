@@ -5,7 +5,16 @@
     <link>https://popov1024.github.io/tags/mikrotik/</link>
     <description>Recent content in mikrotik on Andrey Popov</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 13 Nov 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://popov1024.github.io/tags/mikrotik/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 06 Apr 2023 09:59:13 +0300</lastBuildDate><atom:link href="https://popov1024.github.io/tags/mikrotik/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Настройка собственного VPN сервера на базе Wireguard</title>
+      <link>https://popov1024.github.io/post/wireguard/</link>
+      <pubDate>Thu, 06 Apr 2023 09:59:13 +0300</pubDate>
+      
+      <guid>https://popov1024.github.io/post/wireguard/</guid>
+      <description>Конфигурирование Wireguard сервера Первым делом требуется создать VPS сервер в каком-либо облачном провайдере.</description>
+    </item>
+    
     <item>
       <title>Mikrotik на страже рекламы</title>
       <link>https://popov1024.github.io/post/mikrotik-ad/</link>
