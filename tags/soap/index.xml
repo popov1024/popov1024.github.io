@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>soap on Andrey Popov</title>
+    <title>Soap on Andrey Popov</title>
     <link>https://popov1024.github.io/tags/soap/</link>
-    <description>Recent content in soap on Andrey Popov</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 18 Nov 2013 00:00:00 +0000</lastBuildDate><atom:link href="https://popov1024.github.io/tags/soap/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Soap on Andrey Popov</description>
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Mon, 18 Nov 2013 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://popov1024.github.io/tags/soap/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PowerShell SOAP</title>
       <link>https://popov1024.github.io/post/powershell-soap/</link>
       <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/powershell-soap/</guid>
-      <description>Пример вызова метода Web сервиса посредством SOAP:
-$secpasswd = ConvertTo-SecureString &amp;quot;password&amp;quot; -AsPlainText -Force $mycreds = New-Object System.</description>
+      <description>&lt;p&gt;Пример вызова метода Web сервиса посредством &lt;code&gt;SOAP&lt;/code&gt;:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-powershell&#34;&gt;$secpasswd = ConvertTo-SecureString &amp;quot;password&amp;quot; -AsPlainText -Force&#xA;$mycreds = New-Object System.Management.Automation.PSCredential (&amp;quot;userName&amp;quot;, $secpasswd)&#xA;&#xA;$uri = &amp;quot;http://localhost/IB/ws/example?wsdl&amp;quot;&#xA;&#xA;try {&#xA;    $service = New-WebServiceProxy -Uri $uri -Credential $mycreds&#xA;} catch {&#xA;    Write-Error $_ -ErrorAction:&#39;SilentlyContinue&#39;&#xA;}&#xA;&#xA;if($service -ne $null){&#xA;    try{&#xA;        $version = $service.GetVersion()&#xA;        echo $version&#xA;    }&#xA;    catch{&#xA;        Write-Error $_ -ErrorAction:&#39;SilentlyContinue&#39;&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;В данном случае использовался вызов Web сервиса &lt;code&gt;1C:Предприятие 8.2&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

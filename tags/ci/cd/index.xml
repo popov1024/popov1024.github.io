@@ -1,28 +1,26 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ci/cd on Andrey Popov</title>
+    <title>Ci/Cd on Andrey Popov</title>
     <link>https://popov1024.github.io/tags/ci/cd/</link>
-    <description>Recent content in ci/cd on Andrey Popov</description>
-    <generator>Hugo -- gohugo.io</generator><atom:link href="https://popov1024.github.io/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Ci/Cd on Andrey Popov</description>
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Fri, 17 Apr 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://popov1024.github.io/tags/ci/cd/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gitlab CI and dotnet test</title>
       <link>https://popov1024.github.io/post/gitlab-ci-and-dotnet-test/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/gitlab-ci-and-dotnet-test/</guid>
-      <description>Подготовил задачу .gitlab-ci.yml для тестирования dotnet core приложений:
-test: stage: test image: mcr.</description>
+      <description>&lt;p&gt;Подготовил задачу &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; для тестирования &lt;code&gt;dotnet core&lt;/code&gt; приложений:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;test:&#xA;  stage: test&#xA;  image: mcr.microsoft.com/dotnet/core/sdk:2.2.301&#xA;  before_script:&#xA;    - dotnet tool install dotnet-reportgenerator-globaltool --tool-path tools&#xA;  script:&#xA;    - dotnet test --logger:&amp;quot;junit;LogFilePath=${CI_PROJECT_DIR}/junit/{assembly}-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose&amp;quot; --collect:&amp;quot;XPlat Code Coverage&amp;quot;&#xA;    - ./tools/reportgenerator &amp;quot;-reports:./**/TestResults/*/coverage.cobertura.xml&amp;quot; &amp;quot;-targetdir:Reports_Coverage&amp;quot; -reportTypes:TextSummary;&#xA;    - ./tools/reportgenerator &amp;quot;-reports:./**/TestResults/*/coverage.cobertura.xml&amp;quot; &amp;quot;-targetdir:Reports_Coverage&amp;quot; -reportTypes:Html;&#xA;    - cat ./Reports_Coverage/Summary.txt&#xA;  coverage: /Line coverage[\s\S].+%/&#xA;  artifacts:&#xA;    expire_in: 1 week&#xA;    paths:&#xA;      - Reports_Coverage/&#xA;    reports:&#xA;      junit:&#xA;        - ${CI_PROJECT_DIR}/junit/*-test-result.xml&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;С шаблоном &lt;code&gt;junit&lt;/code&gt; столкнулся с проблемой. Если использовать маску &lt;code&gt;**&lt;/code&gt;, то она не будет сопоставлять пути с прописными символамии (которые были у меня в именах проектов). Поэтому я сделал отдельную директорию для хранения результатов тестов.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>1С:Предприятие &#43; Ant &#43; jenkins</title>
       <link>https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/</link>
       <pubDate>Sat, 16 Mar 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/</guid>
-      <description>1С:Предприятие обладает очень скудными средствами разработки и интеграции. Однако выжать максимум автоматизации сборки и публикации можно.</description>
+      <description>&lt;p&gt;1С:Предприятие обладает очень скудными средствами разработки и интеграции. Однако выжать максимум автоматизации сборки и публикации можно.&#xA;Мои проекты имеют следующий жизненный цикл:&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

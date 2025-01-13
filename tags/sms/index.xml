@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sms on Andrey Popov</title>
+    <title>Sms on Andrey Popov</title>
     <link>https://popov1024.github.io/tags/sms/</link>
-    <description>Recent content in sms on Andrey Popov</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 15 Jul 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://popov1024.github.io/tags/sms/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Sms on Andrey Popov</description>
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Sun, 15 Jul 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://popov1024.github.io/tags/sms/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Отправка смс через mikrotik</title>
       <link>https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/</guid>
-      <description>Use_SSH_to_execute_commands
-ssh router &#39;/tool sms send usb1 &amp;quot;+375XXXXXXXXXX&amp;quot; message=&amp;quot;Hello, world&amp;quot;&#39; </description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://wiki.mikrotik.com/wiki/Use_SSH_to_execute_commands_(DSA_key_login)&#34;&gt;Use_SSH_to_execute_commands&lt;/a&gt;&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;ssh router &#39;/tool sms send usb1 &amp;quot;+375XXXXXXXXXX&amp;quot; message=&amp;quot;Hello, world&amp;quot;&#39;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
   </channel>
 </rss>

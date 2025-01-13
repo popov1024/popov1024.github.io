@@ -1,26 +1,29 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ru" lang="ru">
 <head>
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="generator" content="Hugo 0.111.3">
+  <meta name="generator" content="Hugo 0.140.1">
 
   <title>Andrey Popov</title>
 
   <meta name="description" content="" />
 
+  
   <meta itemprop="name" content="Andrey Popov">
-<meta itemprop="description" content="">
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Andrey Popov"/>
-<meta name="twitter:description" content=""/>
+  <meta itemprop="datePublished" content="2023-04-06T09:59:13+03:00">
+  <meta itemprop="dateModified" content="2023-04-06T09:59:13+03:00">
 
 
-<meta property="og:title" content="Andrey Popov" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://popov1024.github.io/" />
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Andrey Popov">
+
+
+<meta property="og:url" content="https://popov1024.github.io/">
+  <meta property="og:site_name" content="Andrey Popov">
+  <meta property="og:title" content="Andrey Popov">
+  <meta property="og:locale" content="ru">
+  <meta property="og:type" content="website">
 
 
 
@@ -49,7 +52,7 @@
       "publisher": {
         "@id": "https://popov1024.github.io/#author"
       },
-      "inLanguage": ""
+      "inLanguage": "ru"
     },
     {
       "@type": "WebPage",
@@ -62,9 +65,10 @@
       "about": {
          "@id": "https://popov1024.github.io/#author"
       },
+      "datePublished": "2023-04-06T09:59:13+03:00",
       "dateModified": "2023-04-06T09:59:13+03:00",
       "description": ,
-      "inLanguage": "",
+      "inLanguage": "ru",
       "potentialAction": [
         {
           "@type": "ReadAction",
@@ -174,7 +178,8 @@
         </div>
 
         <div>
-          Конфигурирование Wireguard сервера Первым делом требуется создать VPS сервер в каком-либо облачном провайдере.
+          <h2 id="конфигурирование-wireguard-сервера">Конфигурирование <code>Wireguard</code> сервера</h2>
+<p>Первым делом требуется создать VPS сервер в каком-либо облачном провайдере. Я использую <a href="https://m.do.co/c/18905df36c8e">DigitalOcean</a> и получаю бонусные баллы за каждого нового пользователя, который регистрируется по моей реферальной ссылке.</p>
         </div>
 
         <div class="read-more-link">
@@ -191,10 +196,21 @@
         </div>
 
         <div>
-          Кнопки скачивания приложения из магазинов:
-GooglePlay https://play.google.com/intl/en_us/badges/
-AppStore https://developer.apple.com/app-store/marketing/guidelines/
-AppGallery https://developer.
+          <p>Кнопки скачивания приложения из магазинов:</p>
+<ul>
+<li>
+<p>GooglePlay
+<a href="https://play.google.com/intl/en_us/badges/">https://play.google.com/intl/en_us/badges/</a></p>
+</li>
+<li>
+<p>AppStore
+<a href="https://developer.apple.com/app-store/marketing/guidelines/">https://developer.apple.com/app-store/marketing/guidelines/</a></p>
+</li>
+<li>
+<p>AppGallery
+<a href="https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agdlink-getlink-agc-0000001164321881">https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agdlink-getlink-agc-0000001164321881</a></p>
+</li>
+</ul>
         </div>
 
         <div class="read-more-link">
@@ -211,8 +227,10 @@ AppGallery https://developer.
         </div>
 
         <div>
-          Для установк понадобится установленный Android SDK
-./adb connect 192.168.1.1 ./adb install ~/Downloads/VLC_v.
+          <p>Для установк понадобится установленный <code>Android  SDK</code></p>
+<pre><code>./adb connect 192.168.1.1
+./adb install ~/Downloads/VLC_v.3.2.12\(13021204\)\(4.2-9.0\)\(arm7a\).apk
+</code></pre>
         </div>
 
         <div class="read-more-link">
@@ -229,8 +247,27 @@ AppGallery https://developer.
         </div>
 
         <div>
-          Подготовил задачу .gitlab-ci.yml для тестирования dotnet core приложений:
-test: stage: test image: mcr.
+          <p>Подготовил задачу <code>.gitlab-ci.yml</code> для тестирования <code>dotnet core</code> приложений:</p>
+<pre><code class="language-yaml">test:
+  stage: test
+  image: mcr.microsoft.com/dotnet/core/sdk:2.2.301
+  before_script:
+    - dotnet tool install dotnet-reportgenerator-globaltool --tool-path tools
+  script:
+    - dotnet test --logger:&quot;junit;LogFilePath=${CI_PROJECT_DIR}/junit/{assembly}-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose&quot; --collect:&quot;XPlat Code Coverage&quot;
+    - ./tools/reportgenerator &quot;-reports:./**/TestResults/*/coverage.cobertura.xml&quot; &quot;-targetdir:Reports_Coverage&quot; -reportTypes:TextSummary;
+    - ./tools/reportgenerator &quot;-reports:./**/TestResults/*/coverage.cobertura.xml&quot; &quot;-targetdir:Reports_Coverage&quot; -reportTypes:Html;
+    - cat ./Reports_Coverage/Summary.txt
+  coverage: /Line coverage[\s\S].+%/
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - Reports_Coverage/
+    reports:
+      junit:
+        - ${CI_PROJECT_DIR}/junit/*-test-result.xml
+</code></pre>
+<p>С шаблоном <code>junit</code> столкнулся с проблемой. Если использовать маску <code>**</code>, то она не будет сопоставлять пути с прописными символамии (которые были у меня в именах проектов). Поэтому я сделал отдельную директорию для хранения результатов тестов.</p>
         </div>
 
         <div class="read-more-link">
@@ -247,7 +284,7 @@ test: stage: test image: mcr.
         </div>
 
         <div>
-          Raspberry Pi отлично подходит для принтсервера. В моем случае используется RaspberryPi Zero W, подключаемый к сети по WiFi.
+          <p>Raspberry Pi отлично подходит для принтсервера. В моем случае используется RaspberryPi Zero W, подключаемый к сети по WiFi.</p>
         </div>
 
         <div class="read-more-link">
@@ -264,7 +301,8 @@ test: stage: test image: mcr.
         </div>
 
         <div>
-          PON модем MT-PON-AT-4 (ZTE F660) имеет возможность доступа по telnet. telnet 192.
+          <p>PON модем <code>MT-PON-AT-4</code> (<code>ZTE F660</code>) имеет возможность доступа по telnet.
+<img src="/content/images/2018/12/Screenshot-2018-12-04-22.25.16.png" alt="Настройка доступа по telnet чере Web-интерфейс"></p>
         </div>
 
         <div class="read-more-link">
@@ -281,11 +319,66 @@ test: stage: test image: mcr.
         </div>
 
         <div>
-          Блокировка рекламы на Mikrotik можно настроить с помощью переоидиечкого запуска скрипта, который для url рекламного контента подменяет ip на 127.
+          <p>Блокировка рекламы на Mikrotik можно настроить с помощью переоидиечкого запуска скрипта, который для url рекламного контента  подменяет ip на 127.0.0.1.</p>
         </div>
 
         <div class="read-more-link">
           <a href="https://popov1024.github.io/post/mikrotik-ad/">Read More</a>
+        </div>
+      </article>
+      <article class="post">
+        <h1 class="post-title">
+          <a href="https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/">Отправка смс через mikrotik</a>
+        </h1>
+
+        <div class="post-date">
+          <time datetime="2018-07-15T00:00:00Z">Jul 15, 2018</time> &middot; 1 min read
+        </div>
+
+        <div>
+          <p><a href="http://wiki.mikrotik.com/wiki/Use_SSH_to_execute_commands_(DSA_key_login)">Use_SSH_to_execute_commands</a></p>
+<pre><code class="language-shell">ssh router '/tool sms send usb1 &quot;+375XXXXXXXXXX&quot; message=&quot;Hello, world&quot;'
+</code></pre>
+        </div>
+
+        <div class="read-more-link">
+          <a href="https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/">Read More</a>
+        </div>
+      </article>
+      <article class="post">
+        <h1 class="post-title">
+          <a href="https://popov1024.github.io/post/sobstviennaia-sistiema-monitoringha-saitov/">Собственная система мониторинга сайтов</a>
+        </h1>
+
+        <div class="post-date">
+          <time datetime="2018-07-15T00:00:00Z">Jul 15, 2018</time> &middot; 2 min read
+        </div>
+
+        <div>
+          <p>Те, кто занимается поддержкой сайтов рано или поздно задумывается как мониторить их доступность. Можно пойти по пути покупки услуг (или пользоваться бесплатными) соответствущих сервисов. Благо их много.</p>
+        </div>
+
+        <div class="read-more-link">
+          <a href="https://popov1024.github.io/post/sobstviennaia-sistiema-monitoringha-saitov/">Read More</a>
+        </div>
+      </article>
+      <article class="post">
+        <h1 class="post-title">
+          <a href="https://popov1024.github.io/post/udobnaia-marshrutizauiia-mikrotik/">Удобная маршрутизауия mikrotik</a>
+        </h1>
+
+        <div class="post-date">
+          <time datetime="2018-07-15T00:00:00Z">Jul 15, 2018</time> &middot; 1 min read
+        </div>
+
+        <div>
+          <p>Необходимо маршрутизировать несколько ip или подсетей по одному правилу.</p>
+<p>Решение
+Вариант &ldquo;в лоб&rdquo; прописывать все это в таблице маршрутизации. Все хорошо работает, когда подсетей несколько, а когда их достигает десяток, да и еще вперемешку на разные шлюзы&hellip;</p>
+        </div>
+
+        <div class="read-more-link">
+          <a href="https://popov1024.github.io/post/udobnaia-marshrutizauiia-mikrotik/">Read More</a>
         </div>
       </article>
   </div>
@@ -305,13 +398,10 @@ test: stage: test image: mcr.
         <a href="/page/2/" aria-label="Page 2" class="page-link" role="button">2</a>
       </li>
       <li class="page-item">
-        <a href="/page/3/" aria-label="Page 3" class="page-link" role="button">3</a>
-      </li>
-      <li class="page-item">
         <a href="/page/2/" aria-label="Next" class="page-link" role="button"><span aria-hidden="true">&raquo;</span></a>
       </li>
       <li class="page-item">
-        <a href="/page/3/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        <a href="/page/2/" aria-label="Last" class="page-link" role="button"><span aria-hidden="true">&raquo;&raquo;</span></a>
       </li>
     </ul>
   </main>
@@ -319,7 +409,7 @@ test: stage: test image: mcr.
   <footer>
   <div>
     <p>
-      &copy; Andrey Popov 2023
+      &copy; Andrey Popov 2025
 
       
 

@@ -1,48 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>mikrotik on Andrey Popov</title>
+    <title>Mikrotik on Andrey Popov</title>
     <link>https://popov1024.github.io/tags/mikrotik/</link>
-    <description>Recent content in mikrotik on Andrey Popov</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 06 Apr 2023 09:59:13 +0300</lastBuildDate><atom:link href="https://popov1024.github.io/tags/mikrotik/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Mikrotik on Andrey Popov</description>
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Thu, 06 Apr 2023 09:59:13 +0300</lastBuildDate>
+    <atom:link href="https://popov1024.github.io/tags/mikrotik/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Настройка собственного VPN сервера на базе Wireguard</title>
       <link>https://popov1024.github.io/post/wireguard/</link>
       <pubDate>Thu, 06 Apr 2023 09:59:13 +0300</pubDate>
-      
       <guid>https://popov1024.github.io/post/wireguard/</guid>
-      <description>Конфигурирование Wireguard сервера Первым делом требуется создать VPS сервер в каком-либо облачном провайдере.</description>
+      <description>&lt;h2 id=&#34;конфигурирование-wireguard-сервера&#34;&gt;Конфигурирование &lt;code&gt;Wireguard&lt;/code&gt; сервера&lt;/h2&gt;&#xA;&lt;p&gt;Первым делом требуется создать VPS сервер в каком-либо облачном провайдере. Я использую &lt;a href=&#34;https://m.do.co/c/18905df36c8e&#34;&gt;DigitalOcean&lt;/a&gt; и получаю бонусные баллы за каждого нового пользователя, который регистрируется по моей реферальной ссылке.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Mikrotik на страже рекламы</title>
       <link>https://popov1024.github.io/post/mikrotik-ad/</link>
       <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/mikrotik-ad/</guid>
-      <description>Блокировка рекламы на Mikrotik можно настроить с помощью переоидиечкого запуска скрипта, который для url рекламного контента подменяет ip на 127.</description>
+      <description>&lt;p&gt;Блокировка рекламы на Mikrotik можно настроить с помощью переоидиечкого запуска скрипта, который для url рекламного контента  подменяет ip на 127.0.0.1.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Отправка смс через mikrotik</title>
       <link>https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/</guid>
-      <description>Use_SSH_to_execute_commands
-ssh router &#39;/tool sms send usb1 &amp;quot;+375XXXXXXXXXX&amp;quot; message=&amp;quot;Hello, world&amp;quot;&#39; </description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://wiki.mikrotik.com/wiki/Use_SSH_to_execute_commands_(DSA_key_login)&#34;&gt;Use_SSH_to_execute_commands&lt;/a&gt;&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;ssh router &#39;/tool sms send usb1 &amp;quot;+375XXXXXXXXXX&amp;quot; message=&amp;quot;Hello, world&amp;quot;&#39;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
     <item>
       <title>Удобная маршрутизауия mikrotik</title>
       <link>https://popov1024.github.io/post/udobnaia-marshrutizauiia-mikrotik/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/udobnaia-marshrutizauiia-mikrotik/</guid>
-      <description>Необходимо маршрутизировать несколько ip или подсетей по одному правилу.
-Решение Вариант &amp;ldquo;в лоб&amp;rdquo; прописывать все это в таблице маршрутизации.</description>
+      <description>&lt;p&gt;Необходимо маршрутизировать несколько ip или подсетей по одному правилу.&lt;/p&gt;&#xA;&lt;p&gt;Решение&#xA;Вариант &amp;ldquo;в лоб&amp;rdquo; прописывать все это в таблице маршрутизации. Все хорошо работает, когда подсетей несколько, а когда их достигает десяток, да и еще вперемешку на разные шлюзы&amp;hellip;&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

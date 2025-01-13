@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>xml on Andrey Popov</title>
+    <title>Xml on Andrey Popov</title>
     <link>https://popov1024.github.io/tags/xml/</link>
-    <description>Recent content in xml on Andrey Popov</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 09 Apr 2018 00:00:00 +0000</lastBuildDate><atom:link href="https://popov1024.github.io/tags/xml/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Xml on Andrey Popov</description>
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Mon, 09 Apr 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://popov1024.github.io/tags/xml/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>ASP.Net Core custom XML formatter with Windows-1251</title>
       <link>https://popov1024.github.io/post/asp-net-core-custom-xml-formatter/</link>
       <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/asp-net-core-custom-xml-formatter/</guid>
-      <description>Возникла задача обработки XML в кодировке Windows-1251. Штатный форматтер XML в MVC ASP.</description>
+      <description>&lt;p&gt;Возникла задача обработки &lt;code&gt;XML&lt;/code&gt; в кодировке &lt;code&gt;Windows-1251&lt;/code&gt;. Штатный форматтер &lt;code&gt;XML&lt;/code&gt; в &lt;code&gt;MVC&lt;/code&gt; &lt;code&gt;ASP.Net Core&lt;/code&gt; умеет выполнять обработку только &lt;code&gt;UTF-8&lt;/code&gt;. Но так же MVC поддерживает возможность создания собственных форматтеров.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

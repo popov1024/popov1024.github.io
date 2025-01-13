@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>vpn on Andrey Popov</title>
+    <title>Vpn on Andrey Popov</title>
     <link>https://popov1024.github.io/tags/vpn/</link>
-    <description>Recent content in vpn on Andrey Popov</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 06 Apr 2023 09:59:13 +0300</lastBuildDate><atom:link href="https://popov1024.github.io/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Vpn on Andrey Popov</description>
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Thu, 06 Apr 2023 09:59:13 +0300</lastBuildDate>
+    <atom:link href="https://popov1024.github.io/tags/vpn/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Настройка собственного VPN сервера на базе Wireguard</title>
       <link>https://popov1024.github.io/post/wireguard/</link>
       <pubDate>Thu, 06 Apr 2023 09:59:13 +0300</pubDate>
-      
       <guid>https://popov1024.github.io/post/wireguard/</guid>
-      <description>Конфигурирование Wireguard сервера Первым делом требуется создать VPS сервер в каком-либо облачном провайдере.</description>
+      <description>&lt;h2 id=&#34;конфигурирование-wireguard-сервера&#34;&gt;Конфигурирование &lt;code&gt;Wireguard&lt;/code&gt; сервера&lt;/h2&gt;&#xA;&lt;p&gt;Первым делом требуется создать VPS сервер в каком-либо облачном провайдере. Я использую &lt;a href=&#34;https://m.do.co/c/18905df36c8e&#34;&gt;DigitalOcean&lt;/a&gt; и получаю бонусные баллы за каждого нового пользователя, который регистрируется по моей реферальной ссылке.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

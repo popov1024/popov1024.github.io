@@ -1,37 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>docker on Andrey Popov</title>
+    <title>Docker on Andrey Popov</title>
     <link>https://popov1024.github.io/tags/docker/</link>
-    <description>Recent content in docker on Andrey Popov</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 06 Apr 2023 09:59:13 +0300</lastBuildDate><atom:link href="https://popov1024.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <description>Recent content in Docker on Andrey Popov</description>
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Thu, 06 Apr 2023 09:59:13 +0300</lastBuildDate>
+    <atom:link href="https://popov1024.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Настройка собственного VPN сервера на базе Wireguard</title>
       <link>https://popov1024.github.io/post/wireguard/</link>
       <pubDate>Thu, 06 Apr 2023 09:59:13 +0300</pubDate>
-      
       <guid>https://popov1024.github.io/post/wireguard/</guid>
-      <description>Конфигурирование Wireguard сервера Первым делом требуется создать VPS сервер в каком-либо облачном провайдере.</description>
+      <description>&lt;h2 id=&#34;конфигурирование-wireguard-сервера&#34;&gt;Конфигурирование &lt;code&gt;Wireguard&lt;/code&gt; сервера&lt;/h2&gt;&#xA;&lt;p&gt;Первым делом требуется создать VPS сервер в каком-либо облачном провайдере. Я использую &lt;a href=&#34;https://m.do.co/c/18905df36c8e&#34;&gt;DigitalOcean&lt;/a&gt; и получаю бонусные баллы за каждого нового пользователя, который регистрируется по моей реферальной ссылке.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Собственная система мониторинга сайтов</title>
       <link>https://popov1024.github.io/post/sobstviennaia-sistiema-monitoringha-saitov/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/sobstviennaia-sistiema-monitoringha-saitov/</guid>
-      <description>Те, кто занимается поддержкой сайтов рано или поздно задумывается как мониторить их доступность.</description>
+      <description>&lt;p&gt;Те, кто занимается поддержкой сайтов рано или поздно задумывается как мониторить их доступность. Можно пойти по пути покупки услуг (или пользоваться бесплатными) соответствущих сервисов. Благо их много.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Docker Root Dir</title>
       <link>https://popov1024.github.io/post/docker-root-dir/</link>
       <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/docker-root-dir/</guid>
-      <description>По умолчанию Docker хранит свое окружение (образа, контейнеры и т.д.) в /var/lib/docker.</description>
+      <description>&lt;p&gt;По умолчанию &lt;code&gt;Docker&lt;/code&gt; хранит свое окружение (образа, контейнеры и т.д.) в &lt;code&gt;/var/lib/docker&lt;/code&gt;. Однако часто может возникать проблема нехватки места из-за большого размера контейнеров при хранении в &lt;code&gt;/var&lt;/code&gt; на корневом томе.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

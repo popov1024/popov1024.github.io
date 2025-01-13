@@ -4,170 +4,135 @@
     <title>Posts on Andrey Popov</title>
     <link>https://popov1024.github.io/post/</link>
     <description>Recent content in Posts on Andrey Popov</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 06 Apr 2023 09:59:13 +0300</lastBuildDate><atom:link href="https://popov1024.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>ru</language>
+    <lastBuildDate>Thu, 06 Apr 2023 09:59:13 +0300</lastBuildDate>
+    <atom:link href="https://popov1024.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Настройка собственного VPN сервера на базе Wireguard</title>
       <link>https://popov1024.github.io/post/wireguard/</link>
       <pubDate>Thu, 06 Apr 2023 09:59:13 +0300</pubDate>
-      
       <guid>https://popov1024.github.io/post/wireguard/</guid>
-      <description>Конфигурирование Wireguard сервера Первым делом требуется создать VPS сервер в каком-либо облачном провайдере.</description>
+      <description>&lt;h2 id=&#34;конфигурирование-wireguard-сервера&#34;&gt;Конфигурирование &lt;code&gt;Wireguard&lt;/code&gt; сервера&lt;/h2&gt;&#xA;&lt;p&gt;Первым делом требуется создать VPS сервер в каком-либо облачном провайдере. Я использую &lt;a href=&#34;https://m.do.co/c/18905df36c8e&#34;&gt;DigitalOcean&lt;/a&gt; и получаю бонусные баллы за каждого нового пользователя, который регистрируется по моей реферальной ссылке.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>App Badges</title>
       <link>https://popov1024.github.io/post/app-badges/</link>
       <pubDate>Tue, 01 Nov 2022 14:46:02 +0300</pubDate>
-      
       <guid>https://popov1024.github.io/post/app-badges/</guid>
-      <description>Кнопки скачивания приложения из магазинов:
-GooglePlay https://play.google.com/intl/en_us/badges/
-AppStore https://developer.apple.com/app-store/marketing/guidelines/
-AppGallery https://developer.</description>
+      <description>&lt;p&gt;Кнопки скачивания приложения из магазинов:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;GooglePlay&#xA;&lt;a href=&#34;https://play.google.com/intl/en_us/badges/&#34;&gt;https://play.google.com/intl/en_us/badges/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;AppStore&#xA;&lt;a href=&#34;https://developer.apple.com/app-store/marketing/guidelines/&#34;&gt;https://developer.apple.com/app-store/marketing/guidelines/&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;AppGallery&#xA;&lt;a href=&#34;https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agdlink-getlink-agc-0000001164321881&#34;&gt;https://developer.huawei.com/consumer/en/doc/development/AppGallery-connect-Guides/agdlink-getlink-agc-0000001164321881&lt;/a&gt;&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
-    
     <item>
       <title>Установка apk на FireTV</title>
       <link>https://popov1024.github.io/post/firetv-install-apk/</link>
       <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/firetv-install-apk/</guid>
-      <description>Для установк понадобится установленный Android SDK
-./adb connect 192.168.1.1 ./adb install ~/Downloads/VLC_v.</description>
+      <description>&lt;p&gt;Для установк понадобится установленный &lt;code&gt;Android  SDK&lt;/code&gt;&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;./adb connect 192.168.1.1&#xA;./adb install ~/Downloads/VLC_v.3.2.12\(13021204\)\(4.2-9.0\)\(arm7a\).apk&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
     <item>
       <title>Gitlab CI and dotnet test</title>
       <link>https://popov1024.github.io/post/gitlab-ci-and-dotnet-test/</link>
       <pubDate>Fri, 17 Apr 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/gitlab-ci-and-dotnet-test/</guid>
-      <description>Подготовил задачу .gitlab-ci.yml для тестирования dotnet core приложений:
-test: stage: test image: mcr.</description>
+      <description>&lt;p&gt;Подготовил задачу &lt;code&gt;.gitlab-ci.yml&lt;/code&gt; для тестирования &lt;code&gt;dotnet core&lt;/code&gt; приложений:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-yaml&#34;&gt;test:&#xA;  stage: test&#xA;  image: mcr.microsoft.com/dotnet/core/sdk:2.2.301&#xA;  before_script:&#xA;    - dotnet tool install dotnet-reportgenerator-globaltool --tool-path tools&#xA;  script:&#xA;    - dotnet test --logger:&amp;quot;junit;LogFilePath=${CI_PROJECT_DIR}/junit/{assembly}-test-result.xml;MethodFormat=Class;FailureBodyFormat=Verbose&amp;quot; --collect:&amp;quot;XPlat Code Coverage&amp;quot;&#xA;    - ./tools/reportgenerator &amp;quot;-reports:./**/TestResults/*/coverage.cobertura.xml&amp;quot; &amp;quot;-targetdir:Reports_Coverage&amp;quot; -reportTypes:TextSummary;&#xA;    - ./tools/reportgenerator &amp;quot;-reports:./**/TestResults/*/coverage.cobertura.xml&amp;quot; &amp;quot;-targetdir:Reports_Coverage&amp;quot; -reportTypes:Html;&#xA;    - cat ./Reports_Coverage/Summary.txt&#xA;  coverage: /Line coverage[\s\S].+%/&#xA;  artifacts:&#xA;    expire_in: 1 week&#xA;    paths:&#xA;      - Reports_Coverage/&#xA;    reports:&#xA;      junit:&#xA;        - ${CI_PROJECT_DIR}/junit/*-test-result.xml&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;С шаблоном &lt;code&gt;junit&lt;/code&gt; столкнулся с проблемой. Если использовать маску &lt;code&gt;**&lt;/code&gt;, то она не будет сопоставлять пути с прописными символамии (которые были у меня в именах проектов). Поэтому я сделал отдельную директорию для хранения результатов тестов.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Printserver на базе RaspberryPi</title>
       <link>https://popov1024.github.io/post/printserver-raspberrypizero/</link>
       <pubDate>Tue, 09 Jul 2019 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/printserver-raspberrypizero/</guid>
-      <description>Raspberry Pi отлично подходит для принтсервера. В моем случае используется RaspberryPi Zero W, подключаемый к сети по WiFi.</description>
+      <description>&lt;p&gt;Raspberry Pi отлично подходит для принтсервера. В моем случае используется RaspberryPi Zero W, подключаемый к сети по WiFi.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Модем MT-PON-AT-4 (ZTE F660)</title>
       <link>https://popov1024.github.io/post/modem_mt-pon-at-4_zte_f660/</link>
       <pubDate>Tue, 04 Dec 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/modem_mt-pon-at-4_zte_f660/</guid>
-      <description>PON модем MT-PON-AT-4 (ZTE F660) имеет возможность доступа по telnet. telnet 192.</description>
+      <description>&lt;p&gt;PON модем &lt;code&gt;MT-PON-AT-4&lt;/code&gt; (&lt;code&gt;ZTE F660&lt;/code&gt;) имеет возможность доступа по telnet.&#xA;&lt;img src=&#34;https://popov1024.github.io/content/images/2018/12/Screenshot-2018-12-04-22.25.16.png&#34; alt=&#34;Настройка доступа по telnet чере Web-интерфейс&#34;&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Mikrotik на страже рекламы</title>
       <link>https://popov1024.github.io/post/mikrotik-ad/</link>
       <pubDate>Tue, 13 Nov 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/mikrotik-ad/</guid>
-      <description>Блокировка рекламы на Mikrotik можно настроить с помощью переоидиечкого запуска скрипта, который для url рекламного контента подменяет ip на 127.</description>
+      <description>&lt;p&gt;Блокировка рекламы на Mikrotik можно настроить с помощью переоидиечкого запуска скрипта, который для url рекламного контента  подменяет ip на 127.0.0.1.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Отправка смс через mikrotik</title>
       <link>https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/otpravka-sms-chieriez-mikrotik/</guid>
-      <description>Use_SSH_to_execute_commands
-ssh router &#39;/tool sms send usb1 &amp;quot;+375XXXXXXXXXX&amp;quot; message=&amp;quot;Hello, world&amp;quot;&#39; </description>
+      <description>&lt;p&gt;&lt;a href=&#34;http://wiki.mikrotik.com/wiki/Use_SSH_to_execute_commands_(DSA_key_login)&#34;&gt;Use_SSH_to_execute_commands&lt;/a&gt;&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-shell&#34;&gt;ssh router &#39;/tool sms send usb1 &amp;quot;+375XXXXXXXXXX&amp;quot; message=&amp;quot;Hello, world&amp;quot;&#39;&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
-    
     <item>
       <title>Собственная система мониторинга сайтов</title>
       <link>https://popov1024.github.io/post/sobstviennaia-sistiema-monitoringha-saitov/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/sobstviennaia-sistiema-monitoringha-saitov/</guid>
-      <description>Те, кто занимается поддержкой сайтов рано или поздно задумывается как мониторить их доступность.</description>
+      <description>&lt;p&gt;Те, кто занимается поддержкой сайтов рано или поздно задумывается как мониторить их доступность. Можно пойти по пути покупки услуг (или пользоваться бесплатными) соответствущих сервисов. Благо их много.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Удобная маршрутизауия mikrotik</title>
       <link>https://popov1024.github.io/post/udobnaia-marshrutizauiia-mikrotik/</link>
       <pubDate>Sun, 15 Jul 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/udobnaia-marshrutizauiia-mikrotik/</guid>
-      <description>Необходимо маршрутизировать несколько ip или подсетей по одному правилу.
-Решение Вариант &amp;ldquo;в лоб&amp;rdquo; прописывать все это в таблице маршрутизации.</description>
+      <description>&lt;p&gt;Необходимо маршрутизировать несколько ip или подсетей по одному правилу.&lt;/p&gt;&#xA;&lt;p&gt;Решение&#xA;Вариант &amp;ldquo;в лоб&amp;rdquo; прописывать все это в таблице маршрутизации. Все хорошо работает, когда подсетей несколько, а когда их достигает десяток, да и еще вперемешку на разные шлюзы&amp;hellip;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Docker Root Dir</title>
       <link>https://popov1024.github.io/post/docker-root-dir/</link>
       <pubDate>Mon, 30 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/docker-root-dir/</guid>
-      <description>По умолчанию Docker хранит свое окружение (образа, контейнеры и т.д.) в /var/lib/docker.</description>
+      <description>&lt;p&gt;По умолчанию &lt;code&gt;Docker&lt;/code&gt; хранит свое окружение (образа, контейнеры и т.д.) в &lt;code&gt;/var/lib/docker&lt;/code&gt;. Однако часто может возникать проблема нехватки места из-за большого размера контейнеров при хранении в &lt;code&gt;/var&lt;/code&gt; на корневом томе.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>ASP.Net Core custom XML formatter with Windows-1251</title>
       <link>https://popov1024.github.io/post/asp-net-core-custom-xml-formatter/</link>
       <pubDate>Mon, 09 Apr 2018 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/asp-net-core-custom-xml-formatter/</guid>
-      <description>Возникла задача обработки XML в кодировке Windows-1251. Штатный форматтер XML в MVC ASP.</description>
+      <description>&lt;p&gt;Возникла задача обработки &lt;code&gt;XML&lt;/code&gt; в кодировке &lt;code&gt;Windows-1251&lt;/code&gt;. Штатный форматтер &lt;code&gt;XML&lt;/code&gt; в &lt;code&gt;MVC&lt;/code&gt; &lt;code&gt;ASP.Net Core&lt;/code&gt; умеет выполнять обработку только &lt;code&gt;UTF-8&lt;/code&gt;. Но так же MVC поддерживает возможность создания собственных форматтеров.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>1С:Предприятие 8 и представление UID</title>
       <link>https://popov1024.github.io/post/1s-priedpriiatiie-8-i-priedstavlieniie-uid/</link>
       <pubDate>Thu, 21 Dec 2017 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/1s-priedpriiatiie-8-i-priedstavlieniie-uid/</guid>
-      <description>Типовой вид ссылки (например, при сериализации): 435837b5-0cf2-11e0-8093-00271346fa31
-Структурный вид ссылки: MMMMMMMM-NNNN-ZZZZ-XXXX-YYYYYYYYYYYY</description>
+      <description>&lt;p&gt;Типовой вид ссылки (например, при сериализации): &lt;code&gt;435837b5-0cf2-11e0-8093-00271346fa31&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;Структурный вид ссылки: &lt;code&gt;MMMMMMMM-NNNN-ZZZZ-XXXX-YYYYYYYYYYYY&lt;/code&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>PowerShell SOAP</title>
       <link>https://popov1024.github.io/post/powershell-soap/</link>
       <pubDate>Mon, 18 Nov 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/powershell-soap/</guid>
-      <description>Пример вызова метода Web сервиса посредством SOAP:
-$secpasswd = ConvertTo-SecureString &amp;quot;password&amp;quot; -AsPlainText -Force $mycreds = New-Object System.</description>
+      <description>&lt;p&gt;Пример вызова метода Web сервиса посредством &lt;code&gt;SOAP&lt;/code&gt;:&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code class=&#34;language-powershell&#34;&gt;$secpasswd = ConvertTo-SecureString &amp;quot;password&amp;quot; -AsPlainText -Force&#xA;$mycreds = New-Object System.Management.Automation.PSCredential (&amp;quot;userName&amp;quot;, $secpasswd)&#xA;&#xA;$uri = &amp;quot;http://localhost/IB/ws/example?wsdl&amp;quot;&#xA;&#xA;try {&#xA;    $service = New-WebServiceProxy -Uri $uri -Credential $mycreds&#xA;} catch {&#xA;    Write-Error $_ -ErrorAction:&#39;SilentlyContinue&#39;&#xA;}&#xA;&#xA;if($service -ne $null){&#xA;    try{&#xA;        $version = $service.GetVersion()&#xA;        echo $version&#xA;    }&#xA;    catch{&#xA;        Write-Error $_ -ErrorAction:&#39;SilentlyContinue&#39;&#xA;    }&#xA;}&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;В данном случае использовался вызов Web сервиса &lt;code&gt;1C:Предприятие 8.2&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>1С:Предприятие &#43; Ant &#43; jenkins</title>
       <link>https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/</link>
       <pubDate>Sat, 16 Mar 2013 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/1s-priedpriiatiie-ant-jenkins/</guid>
-      <description>1С:Предприятие обладает очень скудными средствами разработки и интеграции. Однако выжать максимум автоматизации сборки и публикации можно.</description>
+      <description>&lt;p&gt;1С:Предприятие обладает очень скудными средствами разработки и интеграции. Однако выжать максимум автоматизации сборки и публикации можно.&#xA;Мои проекты имеют следующий жизненный цикл:&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Востановление флешки Corsair Survivor</title>
       <link>https://popov1024.github.io/post/vostanovlieniie/</link>
       <pubDate>Mon, 29 Aug 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/vostanovlieniie/</guid>
-      <description>Казалось бы, что флешки Corsair Survivor неубиваемы&amp;hellip;
-Однако моя в один прекрасный момент умерла.</description>
+      <description>&lt;p&gt;Казалось бы, что флешки &lt;code&gt;Corsair Survivor&lt;/code&gt; неубиваемы&amp;hellip;&lt;/p&gt;&#xA;&lt;p&gt;Однако моя в один прекрасный момент умерла. Причем контроллер опридилялась в системе, но без диска.&#xA;Последовательность востановления:&#xA;1 Определяем &lt;code&gt;VID&lt;/code&gt; и &lt;code&gt;PID&lt;/code&gt; контроллера. Можно с помощью программы &lt;code&gt;Chip Cenius 3.00&lt;/code&gt;&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Сколько нужно прищепок?</title>
       <link>https://popov1024.github.io/post/skolko-nuzhno-prishchiepok/</link>
       <pubDate>Thu, 11 Aug 2011 00:00:00 +0000</pubDate>
-      
       <guid>https://popov1024.github.io/post/skolko-nuzhno-prishchiepok/</guid>
-      <description>Как обычно вешаются шторы на прищепки? Вешаем два края на крайние прищепки, а затем средней прищепкой цепляем нижнюю точку провиса.</description>
+      <description>&lt;p&gt;Как обычно вешаются шторы на прищепки? Вешаем два края на крайние прищепки, а затем средней прищепкой цепляем нижнюю точку провиса. И так повторяем до тех пор, пока не используем все прищепки. Но чаще всего не получается средней прищепки, т.е. для одного провиса остается четное количество прищепок. Как получить правильное количество прищепок, чтобы вешать всегда было удобно? Вот формула количества прищепок (выведена имперически):&lt;/p&gt;</description>
     </item>
-    
+    <item>
+      <title>Hello world</title>
+      <link>https://popov1024.github.io/post/hi/</link>
+      <pubDate>Fri, 02 Jul 1982 00:00:00 +0000</pubDate>
+      <guid>https://popov1024.github.io/post/hi/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
